@@ -1,4 +1,4 @@
-.modal-overlay {
+.modalOverlay {
   position: fixed;
   top: 0;
   left: 0;
@@ -13,7 +13,7 @@
   animation: fadeIn 0.3s ease;
 }
 
-.modal-content {
+.modalContent {
   background: white;
   border-radius: 12px;
   max-width: 1200px;
@@ -24,7 +24,7 @@
   animation: slideUp 0.3s ease;
 }
 
-.modal-close {
+.modalClose {
   position: absolute;
   top: 1rem;
   right: 1rem;
@@ -44,23 +44,23 @@
   line-height: 1;
 }
 
-.modal-close:hover {
+.modalClose:hover {
   background-color: rgba(0, 0, 0, 0.7);
   transform: rotate(90deg);
 }
 
-.modal-body {
+.modalBody {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 2rem;
   padding: 2rem;
 }
 
-.modal-image-section {
+.modalImageSection {
   position: relative;
 }
 
-.image-container {
+.imageContainer {
   position: relative;
   width: 100%;
   background: #f5f5f5;
@@ -70,14 +70,14 @@
   aspect-ratio: 4/3;
 }
 
-.exhibit-image {
+.exhibitImage {
   width: 100%;
   height: 100%;
   object-fit: contain;
   display: block;
 }
 
-.image-nav-arrow {
+.imageNavArrow {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -96,20 +96,20 @@
   z-index: 10;
 }
 
-.image-nav-arrow:hover {
+.imageNavArrow:hover {
   background-color: rgba(0, 0, 0, 0.8);
   transform: translateY(-50%) scale(1.1);
 }
 
-.image-nav-prev {
+.imageNavPrev {
   left: 1rem;
 }
 
-.image-nav-next {
+.imageNavNext {
   right: 1rem;
 }
 
-.image-counter {
+.imageCounter {
   position: absolute;
   bottom: 1rem;
   left: 50%;
@@ -122,20 +122,20 @@
   font-weight: 600;
 }
 
-.modal-info-section {
+.modalInfoSection {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
 }
 
-.exhibit-name {
+.exhibitName {
   font-size: 2rem;
   color: #2c3e50;
   margin: 0;
   line-height: 1.2;
 }
 
-.exhibit-details {
+.exhibitDetails {
   display: flex;
   flex-direction: column;
   gap: 1rem;
@@ -144,32 +144,32 @@
   border-radius: 8px;
 }
 
-.detail-item {
+.detailItem {
   display: flex;
   gap: 1rem;
 }
 
-.detail-label {
+.detailLabel {
   font-weight: 600;
   color: #555;
   min-width: 100px;
 }
 
-.detail-value {
+.detailValue {
   color: #333;
 }
 
-.exhibit-description {
+.exhibitDescription {
   flex: 1;
 }
 
-.exhibit-description h3 {
+.exhibitDescription h3 {
   font-size: 1.3rem;
   color: #2c3e50;
   margin-bottom: 1rem;
 }
 
-.exhibit-description p {
+.exhibitDescription p {
   color: #555;
   line-height: 1.8;
   font-size: 1rem;
@@ -177,7 +177,7 @@
 }
 
 /* Fullscreen view */
-.fullscreen-overlay {
+.fullscreenOverlay {
   position: fixed;
   top: 0;
   left: 0;
@@ -191,7 +191,7 @@
   cursor: pointer;
 }
 
-.fullscreen-close {
+.fullscreenClose {
   position: absolute;
   top: 2rem;
   right: 2rem;
@@ -211,19 +211,19 @@
   line-height: 1;
 }
 
-.fullscreen-close:hover {
+.fullscreenClose:hover {
   background-color: rgba(255, 255, 255, 0.3);
   transform: rotate(90deg);
 }
 
-.fullscreen-image {
+.fullscreenImage {
   max-width: 95%;
   max-height: 95%;
   object-fit: contain;
   cursor: default;
 }
 
-.fullscreen-nav-arrow {
+.fullscreenNavArrow {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -242,20 +242,20 @@
   z-index: 20001;
 }
 
-.fullscreen-nav-arrow:hover {
+.fullscreenNavArrow:hover {
   background-color: rgba(255, 255, 255, 0.3);
   transform: translateY(-50%) scale(1.1);
 }
 
-.fullscreen-nav-prev {
+.fullscreenNavPrev {
   left: 2rem;
 }
 
-.fullscreen-nav-next {
+.fullscreenNavNext {
   right: 2rem;
 }
 
-.fullscreen-counter {
+.fullscreenCounter {
   position: absolute;
   bottom: 2rem;
   left: 50%;
@@ -289,49 +289,49 @@
 }
 
 @media (max-width: 968px) {
-  .modal-body {
+  .modalBody {
     grid-template-columns: 1fr;
   }
 
-  .modal-content {
+  .modalContent {
     max-height: 95vh;
   }
 }
 
 @media (max-width: 768px) {
-  .modal-overlay {
+  .modalOverlay {
     padding: 1rem;
   }
 
-  .modal-content {
+  .modalContent {
     max-height: 95vh;
   }
 
-  .modal-body {
+  .modalBody {
     padding: 1.5rem;
     gap: 1.5rem;
   }
 
-  .exhibit-name {
+  .exhibitName {
     font-size: 1.5rem;
   }
 
-  .image-nav-arrow,
-  .fullscreen-nav-arrow {
+  .imageNavArrow,
+  .fullscreenNavArrow {
     width: 40px;
     height: 40px;
     font-size: 1.2rem;
   }
 
-  .fullscreen-nav-prev {
+  .fullscreenNavPrev {
     left: 1rem;
   }
 
-  .fullscreen-nav-next {
+  .fullscreenNavNext {
     right: 1rem;
   }
 
-  .fullscreen-close {
+  .fullscreenClose {
     top: 1rem;
     right: 1rem;
     width: 40px;

@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import './SplashScreen.css'
+import styles from './SplashScreen.module.css'
 
 function SplashScreen({ onComplete }) {
   const [showSkip, setShowSkip] = useState(false)
@@ -30,14 +30,14 @@ function SplashScreen({ onComplete }) {
   }
 
   return (
-    <div className={`splash-screen ${isAnimating ? 'active' : 'fade-out'}`}>
-      <div className="splash-content">
-        <div className="splash-logo">
+    <div className={`${styles.splashScreen} ${isAnimating ? '' : styles.fadeOut}`}>
+      <div className={styles.splashContent}>
+        <div className={styles.splashLogo}>
           <h1>Hall of Finds</h1>
-          <div className="splash-subtitle">Коллекция археологических находок</div>
+          <div className={styles.splashSubtitle}>Коллекция археологических находок</div>
         </div>
         {showSkip && (
-          <button className="skip-button" onClick={handleComplete}>
+          <button className={styles.skipButton} onClick={handleComplete}>
             Пропустить
           </button>
         )}

@@ -1,39 +1,39 @@
-import './MenuButtons.css'
+import styles from './MenuButtons.module.css'
 
 function MenuButtons({ onCategorySelect, selectedCategory }) {
   return (
-    <div className="menu-buttons">
-      <div className="menu-block">
+    <div className={styles.menuButtons}>
+      <div className={styles.menuBlock}>
         <button
-          className={`menu-button ${selectedCategory === 'ceramics' ? 'active' : ''}`}
+          className={`${styles.menuButton} ${selectedCategory === 'ceramics' ? styles.active : ''}`}
           onClick={() => onCategorySelect('ceramics')}
         >
           Керамика и изразцы
         </button>
         <button
-          className={`menu-button ${selectedCategory === 'metal' ? 'active' : ''}`}
+          className={`${styles.menuButton} ${selectedCategory === 'metal' ? styles.active : ''}`}
           onClick={() => onCategorySelect('metal')}
         >
           Металлические изделия
         </button>
         <button
-          className={`menu-button ${selectedCategory === 'construction' ? 'active' : ''}`}
+          className={`${styles.menuButton} ${selectedCategory === 'construction' ? styles.active : ''}`}
           onClick={() => onCategorySelect('construction')}
         >
           Строительные материалы
         </button>
       </div>
 
-      <div className="menu-block">
-        <button className="menu-button menu-button-quiz">
+      <div className={styles.menuBlock}>
+        <button className={`${styles.menuButton} ${styles.menuButtonQuiz}`}>
           Квиз "Угадай материал"
         </button>
-        <button className="menu-button menu-button-quiz">
+        <button className={`${styles.menuButton} ${styles.menuButtonQuiz}`}>
           Угадай что делает предмет
         </button>
       </div>
 
-      <button className="back-button-menu">
+      <button className={styles.backButtonMenu}>
         Назад
       </button>
     </div>

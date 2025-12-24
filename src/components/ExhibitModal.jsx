@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import './ExhibitModal.css'
+import styles from './ExhibitModal.module.css'
 
 function ExhibitModal({ exhibit, onClose }) {
   const [currentImageIndex, setCurrentImageIndex] = useState(0)
@@ -66,35 +66,35 @@ function ExhibitModal({ exhibit, onClose }) {
 
   return (
     <>
-      <div className="modal-overlay" onClick={onClose}>
-        <div className="modal-content" onClick={(e) => e.stopPropagation()}>
-          <button className="modal-close" onClick={onClose}>
+      <div className={styles.modalOverlay} onClick={onClose}>
+        <div className={styles.modalContent} onClick={(e) => e.stopPropagation()}>
+          <button className={styles.modalClose} onClick={onClose}>
             ×
           </button>
           
-          <div className="modal-body">
-            <div className="modal-image-section">
-              <div className="image-container" onClick={handleImageClick}>
+          <div className={styles.modalBody}>
+            <div className={styles.modalImageSection}>
+              <div className={styles.imageContainer} onClick={handleImageClick}>
                 <img 
                   src={images[currentImageIndex]} 
                   alt={exhibit.name}
-                  className="exhibit-image"
+                  className={styles.exhibitImage}
                 />
                 {totalImages > 1 && (
                   <>
                     <button 
-                      className="image-nav-arrow image-nav-prev"
+                      className={`${styles.imageNavArrow} ${styles.imageNavPrev}`}
                       onClick={handlePrevImage}
                     >
                       ←
                     </button>
                     <button 
-                      className="image-nav-arrow image-nav-next"
+                      className={`${styles.imageNavArrow} ${styles.imageNavNext}`}
                       onClick={handleNextImage}
                     >
                       →
                     </button>
-                    <div className="image-counter">
+                    <div className={styles.imageCounter}>
                       {currentImageIndex + 1} / {totalImages}
                     </div>
                   </>
@@ -102,27 +102,27 @@ function ExhibitModal({ exhibit, onClose }) {
               </div>
             </div>
 
-            <div className="modal-info-section">
-              <h2 className="exhibit-name">{exhibit.name}</h2>
+            <div className={styles.modalInfoSection}>
+              <h2 className={styles.exhibitName}>{exhibit.name}</h2>
               
-              <div className="exhibit-details">
-                <div className="detail-item">
-                  <span className="detail-label">Дата:</span>
-                  <span className="detail-value">{exhibit.date}</span>
+              <div className={styles.exhibitDetails}>
+                <div className={styles.detailItem}>
+                  <span className={styles.detailLabel}>Дата:</span>
+                  <span className={styles.detailValue}>{exhibit.date}</span>
                 </div>
                 
-                <div className="detail-item">
-                  <span className="detail-label">Материал:</span>
-                  <span className="detail-value">{exhibit.material}</span>
+                <div className={styles.detailItem}>
+                  <span className={styles.detailLabel}>Материал:</span>
+                  <span className={styles.detailValue}>{exhibit.material}</span>
                 </div>
                 
-                <div className="detail-item">
-                  <span className="detail-label">Размер:</span>
-                  <span className="detail-value">{exhibit.size}</span>
+                <div className={styles.detailItem}>
+                  <span className={styles.detailLabel}>Размер:</span>
+                  <span className={styles.detailValue}>{exhibit.size}</span>
                 </div>
               </div>
 
-              <div className="exhibit-description">
+              <div className={styles.exhibitDescription}>
                 <h3>Описание</h3>
                 <p>{exhibit.description}</p>
               </div>
@@ -132,31 +132,31 @@ function ExhibitModal({ exhibit, onClose }) {
       </div>
 
       {isFullscreen && (
-        <div className="fullscreen-overlay" onClick={handleCloseFullscreen}>
-          <button className="fullscreen-close" onClick={handleCloseFullscreen}>
+        <div className={styles.fullscreenOverlay} onClick={handleCloseFullscreen}>
+          <button className={styles.fullscreenClose} onClick={handleCloseFullscreen}>
             ×
           </button>
           <img 
             src={images[currentImageIndex]} 
             alt={exhibit.name}
-            className="fullscreen-image"
+            className={styles.fullscreenImage}
             onClick={(e) => e.stopPropagation()}
           />
           {totalImages > 1 && (
             <>
               <button 
-                className="fullscreen-nav-arrow fullscreen-nav-prev"
+                className={`${styles.fullscreenNavArrow} ${styles.fullscreenNavPrev}`}
                 onClick={handlePrevImage}
               >
                 ←
               </button>
               <button 
-                className="fullscreen-nav-arrow fullscreen-nav-next"
+                className={`${styles.fullscreenNavArrow} ${styles.fullscreenNavNext}`}
                 onClick={handleNextImage}
               >
                 →
               </button>
-              <div className="fullscreen-counter">
+              <div className={styles.fullscreenCounter}>
                 {currentImageIndex + 1} / {totalImages}
               </div>
             </>

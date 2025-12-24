@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import MenuButtons from '../components/MenuButtons'
 import Gallery from '../components/Gallery'
-import './Home.css'
+import styles from './Home.module.css'
 
 function Home() {
   const [selectedCategory, setSelectedCategory] = useState('ceramics')
@@ -11,12 +11,12 @@ function Home() {
   }
 
   return (
-    <div className="home">
+    <div className={styles.home}>
       <MenuButtons 
         onCategorySelect={handleCategorySelect}
         selectedCategory={selectedCategory}
       />
-      <div className="gallery-container">
+      <div className={styles.galleryContainer}>
         <Gallery category={selectedCategory} />
       </div>
     </div>

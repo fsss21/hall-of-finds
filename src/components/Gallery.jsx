@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import ExhibitModal from './ExhibitModal'
-import './Gallery.css'
+import styles from './Gallery.module.css'
 
 const categories = {
   ceramics: {
@@ -63,30 +63,30 @@ function Gallery({ category }) {
 
   if (loading || !exhibitsData) {
     return (
-      <div className="gallery">
-        <div className="gallery-categories">
+      <div className={styles.gallery}>
+        <div className={styles.galleryCategories}>
           {categoryData.subcategories.map((sub, index) => (
             <button
               key={sub.id}
-              className="category-button"
+              className={styles.categoryButton}
               disabled
             >
               {sub.name}
             </button>
           ))}
         </div>
-        <div className="gallery-grid">
+        <div className={styles.galleryGrid}>
           {Array.from({ length: 9 }).map((_, index) => (
-            <div key={index} className="gallery-item" style={{ opacity: 0.3 }}>
+            <div key={index} className={styles.galleryItem} style={{ opacity: 0.3 }}>
               <div style={{ width: '100%', height: '140px', background: '#f0f0f0' }}></div>
-              <div className="gallery-item-title" style={{ background: '#f5f5f5' }}></div>
+              <div className={styles.galleryItemTitle} style={{ background: '#f5f5f5' }}></div>
             </div>
           ))}
         </div>
-        <div className="gallery-navigation" style={{ opacity: 0.3 }}>
-          <div className="nav-arrow" style={{ pointerEvents: 'none' }}>←</div>
-          <div className="page-indicator">Загрузка...</div>
-          <div className="nav-arrow" style={{ pointerEvents: 'none' }}>→</div>
+        <div className={styles.galleryNavigation} style={{ opacity: 0.3 }}>
+          <div className={styles.navArrow} style={{ pointerEvents: 'none' }}>←</div>
+          <div className={styles.pageIndicator}>Загрузка...</div>
+          <div className={styles.navArrow} style={{ pointerEvents: 'none' }}>→</div>
         </div>
       </div>
     )
@@ -121,12 +121,12 @@ function Gallery({ category }) {
 
   return (
     <>
-      <div className="gallery">
-        <div className="gallery-categories">
+      <div className={styles.gallery}>
+        <div className={styles.galleryCategories}>
           {categoryData.subcategories.map((sub, index) => (
             <button
               key={sub.id}
-              className={`category-button ${activeSubcategory === index ? 'active' : ''}`}
+              className={`${styles.categoryButton} ${activeSubcategory === index ? styles.active : ''}`}
               onClick={() => {
                 setActiveSubcategory(index)
                 setCurrentPage(0)
@@ -137,11 +137,11 @@ function Gallery({ category }) {
           ))}
         </div>
 
-        <div className="gallery-grid">
+        <div className={styles.galleryGrid}>
           {currentExhibits.map((exhibit, index) => (
             <div 
               key={exhibit.id} 
-              className="gallery-item"
+              className={styles.galleryItem}
               onClick={() => handleExhibitClick(exhibit)}
             >
               <img 
@@ -149,25 +149,25 @@ function Gallery({ category }) {
                 alt={exhibit.name}
                 loading="lazy"
               />
-              <p className="gallery-item-title">{exhibit.name}</p>
+              <p className={styles.galleryItemTitle}>{exhibit.name}</p>
             </div>
           ))}
         </div>
 
-        <div className="gallery-navigation" style={{ opacity: totalPages > 1 ? 1 : 0.3 }}>
+        <div className={styles.galleryNavigation} style={{ opacity: totalPages > 1 ? 1 : 0.3 }}>
           <button 
-            className="nav-arrow" 
+            className={styles.navArrow} 
             onClick={handlePrevPage}
             disabled={totalPages <= 1}
             style={{ opacity: totalPages > 1 ? 1 : 0.5, cursor: totalPages > 1 ? 'pointer' : 'not-allowed' }}
           >
             ←
           </button>
-          <span className="page-indicator">
+          <span className={styles.pageIndicator}>
             {totalPages > 0 ? `${currentPage + 1} / ${totalPages}` : '0 / 0'}
           </span>
           <button 
-            className="nav-arrow" 
+            className={styles.navArrow} 
             onClick={handleNextPage}
             disabled={totalPages <= 1}
             style={{ opacity: totalPages > 1 ? 1 : 0.5, cursor: totalPages > 1 ? 'pointer' : 'not-allowed' }}

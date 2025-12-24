@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import SplashScreen from './components/SplashScreen'
 import Home from './pages/Home'
-import './App.css'
+import styles from './App.module.css'
 
 function App() {
   const [showSplash, setShowSplash] = useState(true)
@@ -15,8 +15,8 @@ function App() {
   }
 
   return (
-    <div className="app">
-      <main className="main-content">
+    <div className={styles.app}>
+      <main className={styles.mainContent}>
         <Home />
       </main>
     </div>

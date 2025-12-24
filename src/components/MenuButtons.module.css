@@ -1,4 +1,4 @@
-.menu-buttons {
+.menuButtons {
   width: 420px;
   min-width: 380px;
   display: flex;
@@ -13,7 +13,7 @@
   height: 100vh;
 }
 
-.menu-block {
+.menuBlock {
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -25,7 +25,7 @@
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
 }
 
-.menu-button {
+.menuButton {
   width: 100%;
   padding: 1.25rem 2rem;
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
@@ -43,7 +43,7 @@
   overflow: hidden;
 }
 
-.menu-button::before {
+.menuButton::before {
   content: '';
   position: absolute;
   top: 0;
@@ -54,39 +54,39 @@
   transition: left 0.5s;
 }
 
-.menu-button:hover::before {
+.menuButton:hover::before {
   left: 100%;
 }
 
-.menu-button:hover {
+.menuButton:hover {
   transform: translateY(-3px) scale(1.02);
   box-shadow: 0 8px 20px rgba(102, 126, 234, 0.35),
               0 4px 8px rgba(102, 126, 234, 0.2);
 }
 
-.menu-button:active {
+.menuButton:active {
   transform: translateY(-1px) scale(1);
 }
 
-.menu-button.active {
+.menuButton.active {
   background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
   box-shadow: 0 6px 16px rgba(52, 152, 219, 0.4),
               inset 0 1px 0 rgba(255, 255, 255, 0.2);
   transform: scale(1.02);
 }
 
-.menu-button-quiz {
+.menuButtonQuiz {
   background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
   box-shadow: 0 4px 12px rgba(245, 87, 108, 0.25),
               0 2px 4px rgba(245, 87, 108, 0.15);
 }
 
-.menu-button-quiz:hover {
+.menuButtonQuiz:hover {
   box-shadow: 0 8px 20px rgba(245, 87, 108, 0.35),
               0 4px 8px rgba(245, 87, 108, 0.2);
 }
 
-.back-button-menu {
+.backButtonMenu {
   padding: 1rem 2rem;
   background: linear-gradient(135deg, #95a5a6 0%, #7f8c8d 100%);
   color: white;
@@ -101,14 +101,14 @@
   margin-top: auto;
 }
 
-.back-button-menu:hover {
+.backButtonMenu:hover {
   background: linear-gradient(135deg, #7f8c8d 0%, #6c7a7b 100%);
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(149, 165, 166, 0.4);
 }
 
 @media (max-width: 968px) {
-  .menu-buttons {
+  .menuButtons {
     width: 100%;
     min-width: auto;
     height: auto;
@@ -120,16 +120,16 @@
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
   }
 
-  .menu-block {
+  .menuBlock {
     padding: 0.75rem;
   }
 
-  .menu-button {
+  .menuButton {
     padding: 0.85rem 1.25rem;
     font-size: 0.9rem;
   }
 
-  .back-button-menu {
+  .backButtonMenu {
     padding: 0.65rem 1.25rem;
     font-size: 0.85rem;
     margin-top: 0.5rem;
