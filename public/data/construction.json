@@ -1,0 +1,318 @@
+{
+  "brick": [
+    {
+      "id": 1,
+      "name": "Кирпич с клеймом",
+      "date": "XIX век",
+      "material": "Глина, обожженная",
+      "size": "25 × 12 × 6.5 см",
+      "description": "Строительный кирпич с клеймом производителя. Стандартный размер для XIX века. Клеймо позволяет определить место и время производства.",
+      "images": [
+        "https://via.placeholder.com/800x600?text=Кирпич+1",
+        "https://via.placeholder.com/800x600?text=Кирпич+1+клеймо",
+        "https://via.placeholder.com/800x600?text=Кирпич+1+вид+3"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Каменный блок с резьбой",
+      "date": "XVIII век",
+      "material": "Известняк",
+      "size": "40 × 30 × 20 см",
+      "description": "Каменный блок с декоративной резьбой. Использовался в архитектурном декоре. Сохранил следы оригинальной обработки.",
+      "images": [
+        "https://via.placeholder.com/800x600?text=Камень+1",
+        "https://via.placeholder.com/800x600?text=Камень+1+деталь"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Кирпич с датой",
+      "date": "1850 год",
+      "material": "Глина, обожженная",
+      "size": "25 × 12 × 6.5 см",
+      "description": "Кирпич с выбитой датой производства.",
+      "images": [
+        "https://via.placeholder.com/800x600?text=Кирпич+дата"
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Каменная плита",
+      "date": "XVII век",
+      "material": "Известняк",
+      "size": "60 × 40 × 10 см",
+      "description": "Каменная плита для пола или подоконника.",
+      "images": [
+        "https://via.placeholder.com/800x600?text=Плита+1",
+        "https://via.placeholder.com/800x600?text=Плита+1+вид+2"
+      ]
+    },
+    {
+      "id": 5,
+      "name": "Кирпич декоративный",
+      "date": "XIX век",
+      "material": "Глина, обожженная",
+      "size": "25 × 12 × 6.5 см",
+      "description": "Декоративный кирпич с рельефным узором.",
+      "images": [
+        "https://via.placeholder.com/800x600?text=Кирпич+декор"
+      ]
+    },
+    {
+      "id": 6,
+      "name": "Каменный карниз",
+      "date": "XVIII век",
+      "material": "Известняк",
+      "size": "Длина 80 см, высота 15 см",
+      "description": "Каменный карниз для декоративного оформления.",
+      "images": [
+        "https://via.placeholder.com/800x600?text=Карниз+1"
+      ]
+    },
+    {
+      "id": 7,
+      "name": "Кирпич с орнаментом",
+      "date": "XIX век",
+      "material": "Глина, обожженная",
+      "size": "25 × 12 × 6.5 см",
+      "description": "Кирпич с нанесенным орнаментом.",
+      "images": [
+        "https://via.placeholder.com/800x600?text=Кирпич+орнамент"
+      ]
+    },
+    {
+      "id": 8,
+      "name": "Каменная колонна",
+      "date": "XVII век",
+      "material": "Известняк",
+      "size": "Диаметр 30 см, высота 100 см",
+      "description": "Фрагмент каменной колонны.",
+      "images": [
+        "https://via.placeholder.com/800x600?text=Колонна+1",
+        "https://via.placeholder.com/800x600?text=Колонна+1+деталь"
+      ]
+    },
+    {
+      "id": 9,
+      "name": "Кирпич угловой",
+      "date": "XIX век",
+      "material": "Глина, обожженная",
+      "size": "25 × 12 × 6.5 см",
+      "description": "Угловой кирпич для оформления углов зданий.",
+      "images": [
+        "https://via.placeholder.com/800x600?text=Кирпич+угол"
+      ]
+    }
+  ],
+  "wood": [
+    {
+      "id": 1,
+      "name": "Деревянная балка",
+      "date": "XVII-XVIII век",
+      "material": "Дуб",
+      "size": "Длина 200 см, сечение 20 × 20 см",
+      "description": "Строительная балка из дуба. Использовалась в конструкции здания. Сохранила следы обработки инструментами того времени.",
+      "images": [
+        "https://via.placeholder.com/800x600?text=Балка+1",
+        "https://via.placeholder.com/800x600?text=Балка+1+деталь"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Деревянная доска",
+      "date": "XVIII век",
+      "material": "Сосна",
+      "size": "Длина 150 см, ширина 30 см, толщина 5 см",
+      "description": "Доска для обшивки стен или пола.",
+      "images": [
+        "https://via.placeholder.com/800x600?text=Доска+1"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Деревянный брус",
+      "date": "XVII век",
+      "material": "Дуб",
+      "size": "Длина 180 см, сечение 15 × 15 см",
+      "description": "Брус для несущих конструкций.",
+      "images": [
+        "https://via.placeholder.com/800x600?text=Брус+1",
+        "https://via.placeholder.com/800x600?text=Брус+1+деталь"
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Деревянная стойка",
+      "date": "XVIII век",
+      "material": "Сосна",
+      "size": "Длина 250 см, сечение 18 × 18 см",
+      "description": "Вертикальная стойка для каркаса.",
+      "images": [
+        "https://via.placeholder.com/800x600?text=Стойка+1"
+      ]
+    },
+    {
+      "id": 5,
+      "name": "Деревянная лага",
+      "date": "XVII-XVIII век",
+      "material": "Дуб",
+      "size": "Длина 300 см, сечение 20 × 15 см",
+      "description": "Лага для устройства пола.",
+      "images": [
+        "https://via.placeholder.com/800x600?text=Лага+1"
+      ]
+    },
+    {
+      "id": 6,
+      "name": "Деревянная обшивка",
+      "date": "XIX век",
+      "material": "Сосна",
+      "size": "Длина 120 см, ширина 20 см, толщина 2 см",
+      "description": "Доска для обшивки с пазом и гребнем.",
+      "images": [
+        "https://via.placeholder.com/800x600?text=Обшивка+1",
+        "https://via.placeholder.com/800x600?text=Обшивка+1+деталь"
+      ]
+    },
+    {
+      "id": 7,
+      "name": "Деревянная перекладина",
+      "date": "XVIII век",
+      "material": "Дуб",
+      "size": "Длина 150 см, сечение 12 × 12 см",
+      "description": "Перекладина для оконной или дверной рамы.",
+      "images": [
+        "https://via.placeholder.com/800x600?text=Перекладина+1"
+      ]
+    },
+    {
+      "id": 8,
+      "name": "Деревянная стропила",
+      "date": "XVII век",
+      "material": "Сосна",
+      "size": "Длина 400 см, сечение 15 × 10 см",
+      "description": "Стропильная нога для крыши.",
+      "images": [
+        "https://via.placeholder.com/800x600?text=Стропила+1"
+      ]
+    },
+    {
+      "id": 9,
+      "name": "Деревянный подоконник",
+      "date": "XIX век",
+      "material": "Дуб",
+      "size": "Длина 100 см, ширина 25 см, толщина 5 см",
+      "description": "Подоконная доска с обработкой.",
+      "images": [
+        "https://via.placeholder.com/800x600?text=Подоконник+1",
+        "https://via.placeholder.com/800x600?text=Подоконник+1+деталь"
+      ]
+    }
+  ],
+  "roofing": [
+    {
+      "id": 1,
+      "name": "Черепица",
+      "date": "XIX век",
+      "material": "Глина, обожженная",
+      "size": "30 × 20 × 1.5 см",
+      "description": "Кровельная черепица. Характерная форма для региона. Использовалась для покрытия крыш жилых и хозяйственных построек.",
+      "images": [
+        "https://via.placeholder.com/800x600?text=Черепица+1",
+        "https://via.placeholder.com/800x600?text=Черепица+1+вид+2"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Черепица коньковая",
+      "date": "XIX век",
+      "material": "Глина, обожженная",
+      "size": "35 × 25 × 2 см",
+      "description": "Коньковая черепица для оформления конька крыши.",
+      "images": [
+        "https://via.placeholder.com/800x600?text=Черепица+конек"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Черепица с клеймом",
+      "date": "XIX век",
+      "material": "Глина, обожженная",
+      "size": "30 × 20 × 1.5 см",
+      "description": "Черепица с клеймом производителя.",
+      "images": [
+        "https://via.placeholder.com/800x600?text=Черепица+клеймо",
+        "https://via.placeholder.com/800x600?text=Черепица+клеймо+деталь"
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Черепица плоская",
+      "date": "XVIII век",
+      "material": "Глина, обожженная",
+      "size": "28 × 18 × 1.5 см",
+      "description": "Плоская черепица для кровли.",
+      "images": [
+        "https://via.placeholder.com/800x600?text=Черепица+плоская"
+      ]
+    },
+    {
+      "id": 5,
+      "name": "Черепица волнистая",
+      "date": "XIX век",
+      "material": "Глина, обожженная",
+      "size": "32 × 22 × 2 см",
+      "description": "Волнистая черепица для лучшего стока воды.",
+      "images": [
+        "https://via.placeholder.com/800x600?text=Черепица+волнистая"
+      ]
+    },
+    {
+      "id": 6,
+      "name": "Черепица угловая",
+      "date": "XIX век",
+      "material": "Глина, обожженная",
+      "size": "30 × 20 × 1.5 см",
+      "description": "Угловая черепица для оформления углов крыши.",
+      "images": [
+        "https://via.placeholder.com/800x600?text=Черепица+угол"
+      ]
+    },
+    {
+      "id": 7,
+      "name": "Черепица с глазурью",
+      "date": "XVIII век",
+      "material": "Глина, обожженная, глазурь",
+      "size": "30 × 20 × 1.5 см",
+      "description": "Черепица с цветной глазурью для декоративного эффекта.",
+      "images": [
+        "https://via.placeholder.com/800x600?text=Черепица+глазурь",
+        "https://via.placeholder.com/800x600?text=Черепица+глазурь+деталь"
+      ]
+    },
+    {
+      "id": 8,
+      "name": "Черепица с рельефом",
+      "date": "XIX век",
+      "material": "Глина, обожженная",
+      "size": "30 × 20 × 1.5 см",
+      "description": "Черепица с рельефным узором.",
+      "images": [
+        "https://via.placeholder.com/800x600?text=Черепица+рельеф"
+      ]
+    },
+    {
+      "id": 9,
+      "name": "Черепица декоративная",
+      "date": "XVIII век",
+      "material": "Глина, обожженная",
+      "size": "30 × 20 × 1.5 см",
+      "description": "Декоративная черепица с орнаментом.",
+      "images": [
+        "https://via.placeholder.com/800x600?text=Черепица+декор"
+      ]
+    }
+  ]
+}
+

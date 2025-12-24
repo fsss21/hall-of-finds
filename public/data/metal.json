@@ -1,0 +1,317 @@
+{
+  "forged": [
+    {
+      "id": 1,
+      "name": "Кованая дверная петля",
+      "date": "XVII век",
+      "material": "Железо, ковка",
+      "size": "30 × 15 × 2 см",
+      "description": "Кованая дверная петля с декоративными элементами. Изготовлена кузнечным способом. Демонстрирует мастерство кузнецов того времени.",
+      "images": [
+        "https://via.placeholder.com/800x600?text=Петля+1",
+        "https://via.placeholder.com/800x600?text=Петля+1+вид+2"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Кованый замок",
+      "date": "XVIII век",
+      "material": "Железо, ковка",
+      "size": "15 × 10 × 5 см",
+      "description": "Кованый дверной замок с механизмом.",
+      "images": [
+        "https://via.placeholder.com/800x600?text=Замок+1"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Кованая решетка",
+      "date": "XIX век",
+      "material": "Железо, ковка",
+      "size": "50 × 30 см",
+      "description": "Декоративная кованая решетка для окна.",
+      "images": [
+        "https://via.placeholder.com/800x600?text=Решетка+1",
+        "https://via.placeholder.com/800x600?text=Решетка+1+деталь"
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Кованый гвоздь",
+      "date": "XVII век",
+      "material": "Железо, ковка",
+      "size": "Длина 15 см",
+      "description": "Кованый гвоздь для строительства.",
+      "images": [
+        "https://via.placeholder.com/800x600?text=Гвоздь+1"
+      ]
+    },
+    {
+      "id": 5,
+      "name": "Кованая скоба",
+      "date": "XVIII век",
+      "material": "Железо, ковка",
+      "size": "20 × 10 × 3 см",
+      "description": "Скоба для крепления деревянных элементов.",
+      "images": [
+        "https://via.placeholder.com/800x600?text=Скоба+1"
+      ]
+    },
+    {
+      "id": 6,
+      "name": "Кованый крюк",
+      "date": "XVII-XVIII век",
+      "material": "Железо, ковка",
+      "size": "Длина 25 см",
+      "description": "Кованый крюк для подвешивания.",
+      "images": [
+        "https://via.placeholder.com/800x600?text=Крюк+1",
+        "https://via.placeholder.com/800x600?text=Крюк+1+вид+2"
+      ]
+    },
+    {
+      "id": 7,
+      "name": "Кованая ручка",
+      "date": "XIX век",
+      "material": "Железо, ковка",
+      "size": "15 × 8 × 2 см",
+      "description": "Декоративная кованая дверная ручка.",
+      "images": [
+        "https://via.placeholder.com/800x600?text=Ручка+1"
+      ]
+    },
+    {
+      "id": 8,
+      "name": "Кованый уголок",
+      "date": "XVIII век",
+      "material": "Железо, ковка",
+      "size": "30 × 30 × 3 см",
+      "description": "Уголок для усиления соединений.",
+      "images": [
+        "https://via.placeholder.com/800x600?text=Уголок+1"
+      ]
+    },
+    {
+      "id": 9,
+      "name": "Кованая задвижка",
+      "date": "XVII век",
+      "material": "Железо, ковка",
+      "size": "20 × 5 × 2 см",
+      "description": "Задвижка для двери или окна.",
+      "images": [
+        "https://via.placeholder.com/800x600?text=Задвижка+1"
+      ]
+    }
+  ],
+  "copper": [
+    {
+      "id": 1,
+      "name": "Медный котел",
+      "date": "XVIII век",
+      "material": "Медь, ковка",
+      "size": "Диаметр 40 см, высота 30 см",
+      "description": "Медный котел для приготовления пищи. Изготовлен методом ковки из листовой меди. Имеет характерные следы использования.",
+      "images": [
+        "https://via.placeholder.com/800x600?text=Котел+1",
+        "https://via.placeholder.com/800x600?text=Котел+1+вид+2",
+        "https://via.placeholder.com/800x600?text=Котел+1+вид+3"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Медная кастрюля",
+      "date": "XIX век",
+      "material": "Медь, ковка",
+      "size": "Диаметр 25 см, высота 20 см",
+      "description": "Медная кастрюля для приготовления пищи.",
+      "images": [
+        "https://via.placeholder.com/800x600?text=Кастрюля+1",
+        "https://via.placeholder.com/800x600?text=Кастрюля+1+вид+2"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Медный таз",
+      "date": "XVIII век",
+      "material": "Медь, ковка",
+      "size": "Диаметр 35 см, высота 10 см",
+      "description": "Медный таз для хозяйственных нужд.",
+      "images": [
+        "https://via.placeholder.com/800x600?text=Таз+1"
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Медная кружка",
+      "date": "XVII век",
+      "material": "Медь, ковка",
+      "size": "Высота 12 см, диаметр 8 см",
+      "description": "Медная кружка для напитков.",
+      "images": [
+        "https://via.placeholder.com/800x600?text=Кружка+медная"
+      ]
+    },
+    {
+      "id": 5,
+      "name": "Медная миска",
+      "date": "XVIII век",
+      "material": "Медь, ковка",
+      "size": "Диаметр 20 см, высота 5 см",
+      "description": "Медная миска для еды.",
+      "images": [
+        "https://via.placeholder.com/800x600?text=Миска+медная"
+      ]
+    },
+    {
+      "id": 6,
+      "name": "Медный ковш",
+      "date": "XVII-XVIII век",
+      "material": "Медь, ковка",
+      "size": "Длина 25 см",
+      "description": "Ковш для зачерпывания жидкостей.",
+      "images": [
+        "https://via.placeholder.com/800x600?text=Ковш+1",
+        "https://via.placeholder.com/800x600?text=Ковш+1+вид+2"
+      ]
+    },
+    {
+      "id": 7,
+      "name": "Медная ложка",
+      "date": "XVIII век",
+      "material": "Медь, ковка",
+      "size": "Длина 18 см",
+      "description": "Столовая ложка из меди.",
+      "images": [
+        "https://via.placeholder.com/800x600?text=Ложка+медная"
+      ]
+    },
+    {
+      "id": 8,
+      "name": "Медный поднос",
+      "date": "XIX век",
+      "material": "Медь, ковка",
+      "size": "40 × 30 см",
+      "description": "Поднос для подачи блюд.",
+      "images": [
+        "https://via.placeholder.com/800x600?text=Поднос+1"
+      ]
+    },
+    {
+      "id": 9,
+      "name": "Медная чаша",
+      "date": "XVII век",
+      "material": "Медь, ковка",
+      "size": "Диаметр 15 см, высота 8 см",
+      "description": "Декоративная медная чаша.",
+      "images": [
+        "https://via.placeholder.com/800x600?text=Чаша+медная"
+      ]
+    }
+  ],
+  "coins": [
+    {
+      "id": 1,
+      "name": "Монета XVIII века",
+      "date": "1750-е годы",
+      "material": "Медь",
+      "size": "Диаметр 2.5 см",
+      "description": "Медная монета XVIII века. Сохранила читаемую чеканку. Представляет историческую ценность как свидетельство денежного обращения того времени.",
+      "images": [
+        "https://via.placeholder.com/800x600?text=Монета+1",
+        "https://via.placeholder.com/800x600?text=Монета+1+оборот"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Монета XIX века",
+      "date": "1820-е годы",
+      "material": "Медь",
+      "size": "Диаметр 2.8 см",
+      "description": "Медная монета XIX века с государственным гербом.",
+      "images": [
+        "https://via.placeholder.com/800x600?text=Монета+2",
+        "https://via.placeholder.com/800x600?text=Монета+2+оборот"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Декоративная бляшка",
+      "date": "XVIII век",
+      "material": "Медь, чеканка",
+      "size": "Диаметр 3 см",
+      "description": "Декоративная медная бляшка с орнаментом.",
+      "images": [
+        "https://via.placeholder.com/800x600?text=Бляшка+1"
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Монета с вензелем",
+      "date": "XVIII век",
+      "material": "Медь",
+      "size": "Диаметр 2.3 см",
+      "description": "Монета с вензелем правителя.",
+      "images": [
+        "https://via.placeholder.com/800x600?text=Монета+вензель",
+        "https://via.placeholder.com/800x600?text=Монета+вензель+оборот"
+      ]
+    },
+    {
+      "id": 5,
+      "name": "Монета провинциальная",
+      "date": "XIX век",
+      "material": "Медь",
+      "size": "Диаметр 2.6 см",
+      "description": "Провинциальная монета с местной символикой.",
+      "images": [
+        "https://via.placeholder.com/800x600?text=Монета+провинция"
+      ]
+    },
+    {
+      "id": 6,
+      "name": "Декоративная пуговица",
+      "date": "XVIII век",
+      "material": "Медь, чеканка",
+      "size": "Диаметр 1.5 см",
+      "description": "Декоративная медная пуговица с орнаментом.",
+      "images": [
+        "https://via.placeholder.com/800x600?text=Пуговица+1"
+      ]
+    },
+    {
+      "id": 7,
+      "name": "Монета с датой",
+      "date": "1765 год",
+      "material": "Медь",
+      "size": "Диаметр 2.4 см",
+      "description": "Монета с четко читаемой датой чеканки.",
+      "images": [
+        "https://via.placeholder.com/800x600?text=Монета+1765",
+        "https://via.placeholder.com/800x600?text=Монета+1765+оборот"
+      ]
+    },
+    {
+      "id": 8,
+      "name": "Монета с номиналом",
+      "date": "XIX век",
+      "material": "Медь",
+      "size": "Диаметр 2.7 см",
+      "description": "Монета с указанием номинала.",
+      "images": [
+        "https://via.placeholder.com/800x600?text=Монета+номинал"
+      ]
+    },
+    {
+      "id": 9,
+      "name": "Декоративный элемент",
+      "date": "XVIII век",
+      "material": "Медь, чеканка",
+      "size": "Диаметр 2 см",
+      "description": "Декоративный элемент с растительным орнаментом.",
+      "images": [
+        "https://via.placeholder.com/800x600?text=Элемент+декор"
+      ]
+    }
+  ]
+}
+
