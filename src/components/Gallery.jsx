@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
-import ExhibitModal from './ExhibitModal'
 import styles from './Gallery.module.css'
+import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
+import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 
 const categories = {
   ceramics: {
@@ -29,26 +30,21 @@ const categories = {
   }
 }
 
-function Gallery({ category }) {
+function Gallery({ category, onExhibitSelect, onBack, onCategoryChange }) {
   const [activeSubcategory, setActiveSubcategory] = useState(0)
   const [currentPage, setCurrentPage] = useState(0)
-  const [selectedExhibit, setSelectedExhibit] = useState(null)
   const [exhibitsData, setExhibitsData] = useState(null)
   const [loading, setLoading] = useState(true)
-  const itemsPerPage = 9
-
+  const itemsPerPage = 8
   const categoryData = categories[category]
-  if (!categoryData) return null
 
-  // Загружаем данные из JSON файла
   useEffect(() => {
+    if (!categoryData) return
     const loadData = async () => {
       try {
         setLoading(true)
         const response = await fetch(`/data/${category}.json`)
-        if (!response.ok) {
-          throw new Error('Failed to load data')
-        }
+        if (!response.ok) throw new Error('Failed to load data')
         const data = await response.json()
         setExhibitsData(data)
       } catch (error) {
@@ -57,15 +53,16 @@ function Gallery({ category }) {
         setLoading(false)
       }
     }
-
     loadData()
-  }, [category])
+  }, [category, categoryData])
+
+  if (!categoryData) return null
 
   if (loading || !exhibitsData) {
     return (
       <div className={styles.gallery}>
         <div className={styles.galleryCategories}>
-          {categoryData.subcategories.map((sub, index) => (
+          {categoryData.subcategories.map((sub) => (
             <button
               key={sub.id}
               className={styles.categoryButton}
@@ -75,15 +72,28 @@ function Gallery({ category }) {
             </button>
           ))}
         </div>
+        <div className={styles.divider}></div>
         <div className={styles.galleryGrid}>
-          {Array.from({ length: 9 }).map((_, index) => (
+          {Array.from({ length: 8 }).map((_, index) => (
             <div key={index} className={styles.galleryItem} style={{ opacity: 0.3 }}>
-              <div style={{ width: '100%', height: '140px', background: '#f0f0f0' }}></div>
-              <div className={styles.galleryItemTitle} style={{ background: '#f5f5f5' }}></div>
+              <div className={styles.galleryItemInner}>
+                <div style={{ width: '100%', height: '140px', background: '#f0f0f0' }}></div>
+                <div className={styles.galleryItemContent}>
+                  <div className={styles.galleryItemTitle} style={{ background: '#f5f5f5', height: '20px', marginBottom: '8px' }}></div>
+                  <div className={styles.galleryItemDescription} style={{ background: '#f5f5f5', height: '40px' }}></div>
+                </div>
+              </div>
             </div>
           ))}
         </div>
         <div className={styles.galleryNavigation} style={{ opacity: 0.3 }}>
+          <button 
+            className={styles.backButton}
+            disabled
+            style={{ pointerEvents: 'none', opacity: 0.5 }}
+          >
+            ← Назад
+          </button>
           <div className={styles.navArrow} style={{ pointerEvents: 'none' }}>←</div>
           <div className={styles.pageIndicator}>Загрузка...</div>
           <div className={styles.navArrow} style={{ pointerEvents: 'none' }}>→</div>
@@ -112,16 +122,22 @@ function Gallery({ category }) {
   }
 
   const handleExhibitClick = (exhibit) => {
-    setSelectedExhibit(exhibit)
-  }
-
-  const handleCloseModal = () => {
-    setSelectedExhibit(null)
+    if (onExhibitSelect) {
+      const currentSubcategory = categoryData.subcategories[activeSubcategory]
+      const allExhibits = getExhibitsForSubcategory(exhibitsData, currentSubcategory.id)
+      const currentIndex = allExhibits.findIndex(e => e.id === exhibit.id)
+      
+      onExhibitSelect(exhibit, {
+        category: categoryData.name,
+        subcategory: currentSubcategory.name,
+        allExhibits: allExhibits,
+        currentIndex: currentIndex >= 0 ? currentIndex : 0
+      })
+    }
   }
 
   return (
-    <>
-      <div className={styles.gallery}>
+    <div className={styles.gallery}>
         <div className={styles.galleryCategories}>
           {categoryData.subcategories.map((sub, index) => (
             <button
@@ -136,54 +152,68 @@ function Gallery({ category }) {
             </button>
           ))}
         </div>
-
+        <div className={styles.divider}></div>
         <div className={styles.galleryGrid}>
-          {currentExhibits.map((exhibit, index) => (
+          {currentExhibits.map((exhibit) => (
             <div 
               key={exhibit.id} 
               className={styles.galleryItem}
               onClick={() => handleExhibitClick(exhibit)}
             >
-              <img 
-                src={exhibit.images[0]} 
-                alt={exhibit.name}
-                loading="lazy"
-              />
-              <p className={styles.galleryItemTitle}>{exhibit.name}</p>
+              <div className={styles.galleryItemInner}>
+                <img 
+                  src={exhibit.images[0]} 
+                  alt={exhibit.name}
+                  loading="lazy"
+                />
+                <div className={styles.galleryItemContent}>
+                  <h3 className={styles.galleryItemTitle}>
+                    {exhibit.name} →
+                  </h3>
+                  <p className={styles.galleryItemDescription}>
+                    {exhibit.description || 'Описание предмета описание предмета описание предмета описание предмета описание предмета описание описание предмета...'}
+                  </p>
+                </div>
+              </div>
             </div>
           ))}
         </div>
 
         <div className={styles.galleryNavigation} style={{ opacity: totalPages > 1 ? 1 : 0.3 }}>
           <button 
+            className={styles.backButton}
+            onClick={() => {
+              if (onBack) {
+                onBack()
+              } else if (onCategoryChange) {
+                // Переключение между категориями
+                const categoryKeys = Object.keys(categories)
+                const currentIndex = categoryKeys.indexOf(category)
+                const prevIndex = currentIndex > 0 ? currentIndex - 1 : categoryKeys.length - 1
+                onCategoryChange(categoryKeys[prevIndex])
+              }
+            }}
+          >
+            Назад
+          </button>
+          <button 
             className={styles.navArrow} 
             onClick={handlePrevPage}
             disabled={totalPages <= 1}
             style={{ opacity: totalPages > 1 ? 1 : 0.5, cursor: totalPages > 1 ? 'pointer' : 'not-allowed' }}
           >
-            ←
+            <ArrowBackIosIcon/>
           </button>
-          <span className={styles.pageIndicator}>
-            {totalPages > 0 ? `${currentPage + 1} / ${totalPages}` : '0 / 0'}
-          </span>
           <button 
             className={styles.navArrow} 
             onClick={handleNextPage}
             disabled={totalPages <= 1}
             style={{ opacity: totalPages > 1 ? 1 : 0.5, cursor: totalPages > 1 ? 'pointer' : 'not-allowed' }}
           >
-            →
+            <ArrowForwardIosIcon/>
           </button>
         </div>
       </div>
-
-      {selectedExhibit && (
-        <ExhibitModal 
-          exhibit={selectedExhibit} 
-          onClose={handleCloseModal}
-        />
-      )}
-    </>
   )
 }
 

@@ -10,12 +10,14 @@ function MenuButtons({ onCategorySelect, selectedCategory }) {
         >
           Керамика и изразцы
         </button>
+        <div className={styles.divider}></div>
         <button
           className={`${styles.menuButton} ${selectedCategory === 'metal' ? styles.active : ''}`}
           onClick={() => onCategorySelect('metal')}
         >
           Металлические изделия
         </button>
+        <div className={styles.divider}></div>
         <button
           className={`${styles.menuButton} ${selectedCategory === 'construction' ? styles.active : ''}`}
           onClick={() => onCategorySelect('construction')}
@@ -26,16 +28,12 @@ function MenuButtons({ onCategorySelect, selectedCategory }) {
 
       <div className={styles.menuBlock}>
         <button className={`${styles.menuButton} ${styles.menuButtonQuiz}`}>
-          Квиз "Угадай материал"
+          Квиз &quot;Угадай материал&quot;
         </button>
         <button className={`${styles.menuButton} ${styles.menuButtonQuiz}`}>
           Угадай что делает предмет
         </button>
       </div>
-
-      <button className={styles.backButtonMenu}>
-        Назад
-      </button>
     </div>
   )
 }

@@ -1,3 +1,32 @@
+@font-face {
+  font-family: 'Anticva';
+  src: url('./assets/fonts/Anticva-Regular.woff2') format('woff2'),
+       url('./assets/fonts/Anticva-Regular.woff') format('woff'),
+       url('./assets/fonts/Anticva-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Raleway-v4020';
+  src: url('./assets/fonts/Raleway-v4020.woff2') format('woff2'),
+       url('./assets/fonts/Raleway-v4020.woff') format('woff'),
+       url('./assets/fonts/Raleway-v4020.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Fallback: используем Raleway из Google Fonts, если локальный файл не найден */
+@font-face {
+  font-family: 'Raleway-v4020';
+  src: local('Raleway'), local('Raleway-Regular');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 * {
   margin: 0;
   padding: 0;

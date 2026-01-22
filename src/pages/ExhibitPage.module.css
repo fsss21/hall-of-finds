@@ -1,0 +1,571 @@
+.exhibitPage {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.mainContainer {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 2rem;
+  background: #50442e;
+  flex-shrink: 0;
+  z-index: 100;
+  font-family: 'Anticva', serif;
+}
+
+.headerTitle {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #BFA282;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.headerControls {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.headerNavArrow {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background: #50442e;
+  color: #BFA282;
+  border: none;
+  font-size: 1.3rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.headerNavArrow:hover {
+  transform: scale(1.1);
+}
+
+.headerNavArrow:active {
+  transform: scale(0.95);
+}
+
+.closeButton {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background: #50442e;
+  color: #BFA282;
+  border: none;
+  font-size: 1.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  line-height: 1;
+}
+
+.closeButton:hover {
+  transform: scale(1.1);
+}
+
+.closeButton:active {
+  transform: scale(0.95);
+}
+
+.exhibitContainer {
+  width: 100%;
+  flex: 1;
+  display: grid;
+  grid-template-columns: 30fr 70fr;
+  gap: 0;
+  padding: 0;
+  overflow: hidden;
+  min-height: 0;
+}
+
+.textSection {
+  background: #CCB395;
+  color: #221102;
+  padding: 2rem;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.05);
+  min-width: 0;
+  font-family: 'Raleway', sans-serif;
+}
+
+.exhibitName {
+  font-size: 2rem;
+  margin: 0 0 1.5rem 0;
+  line-height: 1.2;
+  font-weight: 700;
+}
+
+.exhibitDetails {
+  color: #221102;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+}
+
+.detailItem {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.detailLabel {
+  font-weight: 600;
+  min-width: 100px;
+  flex-shrink: 0;
+}
+
+.detailValue {
+  flex: 1;
+}
+
+.descriptionSection {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+}
+
+.descriptionTitle {
+  font-size: 1.5rem;
+  margin: 0 0 1rem 0;
+  font-weight: 600;
+}
+
+.descriptionText {
+  flex: 1;
+  line-height: 1.8;
+  font-size: 1rem;
+  margin: 0 0 1.5rem 0;
+  overflow-y: auto;
+  padding-right: 0.5rem;
+}
+
+.textPagination {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.5rem ;
+  border-radius: 8px;
+  margin-top: auto;
+}
+
+.textPageIndicator {
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 0.5rem 0;
+}
+
+.textPaginationArrows {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.textNavArrow {
+  width: 40px;
+  height: 40px;
+  background: #CCB395;
+  color: #312916;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.textNavArrow:hover {
+  transform: scale(1.1);
+}
+
+.textNavArrow:active {
+  transform: scale(0.95);
+}
+
+.imageSection {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: center;
+  overflow: hidden;
+  min-width: 0;
+  font-family: 'Raleway', sans-serif;
+  background: #50442e;
+  padding: 0 1.5rem;
+}
+
+.imageBlock {
+  width: 100%;
+  flex: 1;
+  min-height: 200px;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  background: #312916;
+  overflow: hidden;
+}
+
+.imageContainer {
+  position: relative;
+  width: 100%;
+  flex: 1;
+  min-height: 140px;
+  min-width: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+}
+
+.exhibitImage {
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  object-position: center;
+  display: block;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  border-radius: 6px;
+}
+
+
+.imageControls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #BFA282;
+  gap: 1rem;
+  width: 100%;
+  flex-shrink: 0;
+  padding: 25px 15px;
+}
+
+.imageNavArrow {
+  width: 50px;
+  height: 50px;
+  background: #312916;
+  color: #BFA282;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.imageNavArrow:hover {
+  transform: scale(1.1);
+}
+
+.imageNavArrow:active {
+  transform: scale(0.95);
+}
+
+.imageCounter {
+  font-size: 1.1rem;
+  font-weight: 600;
+  background: #312916;
+  padding: 0.75rem 1.5rem;
+  border-radius: 25px;
+  min-width: 100px;
+  text-align: center;
+}
+
+.fullscreenButton {
+  width: 70px;
+  height: 70px;
+  background: #312916;
+  color: #BFA282;
+  border: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  margin-left: auto;
+  line-height: 1;
+}
+
+.fullscreenButton:hover {
+  transform: scale(1.1);
+}
+
+.fullscreenButton:active {
+  transform: scale(0.95);
+}
+
+/* Fullscreen view */
+.fullscreenOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.95);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 20000;
+  cursor: pointer;
+}
+
+.fullscreenClose {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  width: 50px;
+  height: 50px;
+  border: none;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: white;
+  font-size: 2.5rem;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 20001;
+  transition: all 0.3s ease;
+  line-height: 1;
+}
+
+.fullscreenClose:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+  transform: rotate(90deg);
+}
+
+.fullscreenImage {
+  max-width: 96vw;
+  max-height: 96vh;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  object-position: center;
+  cursor: default;
+  
+}
+
+.fullscreenNavArrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: white;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  z-index: 20001;
+}
+
+.fullscreenNavArrow:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+  transform: translateY(-50%) scale(1.1);
+}
+
+.fullscreenNavPrev {
+  left: 2rem;
+}
+
+.fullscreenNavNext {
+  right: 2rem;
+}
+
+.fullscreenCounter {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(255, 255, 255, 0.2);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 25px;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.textSection::-webkit-scrollbar {
+  width: 8px;
+}
+
+.textSection::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+.textSection::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #667eea 0%, #764ba2 100%);
+  border-radius: 10px;
+}
+
+.textSection::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #5568d3 0%, #653a8f 100%);
+}
+
+.descriptionText::-webkit-scrollbar {
+  width: 6px;
+}
+
+.descriptionText::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+.descriptionText::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 10px;
+}
+
+.descriptionText::-webkit-scrollbar-thumb:hover {
+  background: #aaa;
+}
+
+@media (max-width: 968px) {
+  .header {
+    padding: 1rem 1.5rem;
+  }
+
+  .headerTitle {
+    font-size: 1.2rem;
+  }
+
+  .headerNavArrow,
+  .closeButton {
+    width: 40px;
+    height: 40px;
+    font-size: 1.1rem;
+  }
+
+  .closeButton {
+    font-size: 1.5rem;
+  }
+
+  .exhibitContainer {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr;
+  }
+
+  .textSection {
+    max-height: 40vh;
+    padding: 1.5rem;
+  }
+
+  .imageSection {
+    padding: 1rem;
+  }
+
+  .imageContainer {
+    max-height: min(55vh, 420px);
+    min-height: 160px;
+    padding: 1rem;
+  }
+
+  .exhibitImage {
+    border-radius: 4px;
+  }
+
+  .exhibitName {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .textSection {
+    padding: 1rem;
+  }
+
+  .exhibitName {
+    font-size: 1.3rem;
+  }
+
+  .descriptionTitle {
+    font-size: 1.2rem;
+  }
+
+  .imageNavArrow,
+  .fullscreenButton {
+    width: 40px;
+    height: 40px;
+    font-size: 1.2rem;
+  }
+
+  .fullscreenButton {
+    font-size: 1.5rem;
+  }
+
+  .imageCounter {
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+  }
+
+  .fullscreenNavArrow {
+    width: 50px;
+    height: 50px;
+    font-size: 1.5rem;
+  }
+
+  .fullscreenNavPrev {
+    left: 1rem;
+  }
+
+  .fullscreenNavNext {
+    right: 1rem;
+  }
+
+  .fullscreenClose {
+    top: 1rem;
+    right: 1rem;
+    width: 40px;
+    height: 40px;
+    font-size: 2rem;
+  }
+
+  .fullscreenImage {
+    max-width: 96vw;
+    max-height: 92vh;
+  }
+
+  .textNavArrow {
+    width: 35px;
+    height: 35px;
+    font-size: 1rem;
+  }
+}

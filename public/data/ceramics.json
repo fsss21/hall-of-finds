@@ -6,11 +6,10 @@
       "date": "XVIII век",
       "material": "Керамика, глазурь",
       "size": "20 × 20 × 3 см",
-      "description": "Декоративный печной изразец с растительным орнаментом. Изготовлен в технике рельефной лепки с последующим покрытием цветной глазурью. Характерный для XVIII века стиль оформления печей.",
+      "description": "Декоративный печной изразец с растительным орнаментом. Изготовлен в технике рельефной лепки с последующим покрытием цветной глазурью. Характерный для XVIII века стиль оформления печей. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.Декоративный печной изразец с растительным орнаментом. Изготовлен в технике рельефной лепки с последующим покрытием цветной глазурью. Характерный для XVIII века стиль оформления печей. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.Декоративный печной изразец с растительным орнаментом. Изготовлен в технике рельефной лепки с последующим покрытием цветной глазурью. Характерный для XVIII века стиль оформления печей. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.Декоративный печной изразец с растительным орнаментом. Изготовлен в технике рельефной лепки с последующим покрытием цветной глазурью. Характерный для XVIII века стиль оформления печей. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.Декоративный печной изразец с растительным орнаментом. Изготовлен в технике рельефной лепки с последующим покрытием цветной глазурью. Характерный для XVIII века стиль оформления печей. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.Декоративный печной изразец с растительным орнаментом. Изготовлен в технике рельефной лепки с последующим покрытием цветной глазурью. Характерный для XVIII века стиль оформления печей. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.Декоративный печной изразец с растительным орнаментом. Изготовлен в технике рельефной лепки с последующим покрытием цветной глазурью. Характерный для XVIII века стиль оформления печей. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.Декоративный печной изразец с растительным орнаментом. Изготовлен в технике рельефной лепки с последующим покрытием цветной глазурью. Характерный для XVIII века стиль оформления печей. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.Декоративный печной изразец с растительным орнаментом. Изготовлен в технике рельефной лепки с последующим покрытием цветной глазурью. Характерный для XVIII века стиль оформления печей. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.Декоративный печной изразец с растительным орнаментом. Изготовлен в технике рельефной лепки с последующим покрытием цветной глазурью. Характерный для XVIII века стиль оформления печей. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.Декоративный печной изразец с растительным орнаментом. Изготовлен в технике рельефной лепки с последующим покрытием цветной глазурью. Характерный для XVIII века стиль оформления печей. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.Декоративный печной изразец с растительным орнаментом. Изготовлен в технике рельефной лепки с последующим покрытием цветной глазурью. Характерный для XVIII века стиль оформления печей. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.Декоративный печной изразец с растительным орнаментом. Изготовлен в технике рельефной лепки с последующим покрытием цветной глазурью. Характерный для XVIII века стиль оформления печей. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.Декоративный печной изразец с растительным орнаментом. Изготовлен в технике рельефной лепки с последующим покрытием цветной глазурью. Характерный для XVIII века стиль оформления печей. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.Декоративный печной изразец с растительным орнаментом. Изготовлен в технике рельефной лепки с последующим покрытием цветной глазурью. Характерный для XVIII века стиль оформления печей. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.Декоративный печной изразец с растительным орнаментом. Изготовлен в технике рельефной лепки с последующим покрытием цветной глазурью. Характерный для XVIII века стиль оформления печей. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.Декоративный печной изразец с растительным орнаментом. Изготовлен в технике рельефной лепки с последующим покрытием цветной глазурью. Характерный для XVIII века стиль оформления печей. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.Декоративный печной изразец с растительным орнаментом. Изготовлен в технике рельефной лепки с последующим покрытием цветной глазурью. Характерный для XVIII века стиль оформления печей. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.",
       "images": [
-        "https://via.placeholder.com/800x600?text=Изразец+1",
-        "https://via.placeholder.com/800x600?text=Изразец+1+вид+2",
-        "https://via.placeholder.com/800x600?text=Изразец+1+вид+3"
+        "/data/images/ceramic-1-img.png", "/data/images/ceramic-2-img.png"
+        
       ]
     },
     {
@@ -21,8 +20,7 @@
       "size": "18 × 18 × 2.5 см",
       "description": "Печной изразец с геометрическим узором. Отличается более строгим стилем, характерным для XIX века. Сохранил яркость красок благодаря качественной глазури.",
       "images": [
-        "https://via.placeholder.com/800x600?text=Изразец+2",
-        "https://via.placeholder.com/800x600?text=Изразец+2+вид+2"
+        "/data/images/ceramic-2-img.png"
       ]
     },
     {
@@ -33,7 +31,7 @@
       "size": "19 × 19 × 2.8 см",
       "description": "Декоративный изразец с цветочным орнаментом. Яркий пример народного искусства XVIII века.",
       "images": [
-        "https://via.placeholder.com/800x600?text=Изразец+3"
+        "/data/images/ceramic-3-img.png"
       ]
     },
     {
@@ -44,8 +42,7 @@
       "size": "20 × 20 × 3 см",
       "description": "Изразец с изображением птицы. Характерный мотив для декоративного оформления печей.",
       "images": [
-        "https://via.placeholder.com/800x600?text=Изразец+4",
-        "https://via.placeholder.com/800x600?text=Изразец+4+вид+2"
+        "/data/images/ceramic-4-img.png"
       ]
     },
     {
@@ -56,7 +53,7 @@
       "size": "18 × 18 × 2.5 см",
       "description": "Изразец с растительным узором в стиле барокко.",
       "images": [
-        "https://via.placeholder.com/800x600?text=Изразец+5"
+        "/data/images/ceramic-5-img.png"
       ]
     },
     {
@@ -67,7 +64,7 @@
       "size": "20 × 20 × 3 см",
       "description": "Геометрический орнамент на изразце демонстрирует переход к более строгому стилю.",
       "images": [
-        "https://via.placeholder.com/800x600?text=Изразец+6"
+        "/data/images/ceramic-6-img.png"
       ]
     },
     {
@@ -78,8 +75,7 @@
       "size": "19 × 19 × 3.5 см",
       "description": "Рельефный узор создает объемный эффект на поверхности изразца.",
       "images": [
-        "https://via.placeholder.com/800x600?text=Изразец+7",
-        "https://via.placeholder.com/800x600?text=Изразец+7+вид+2"
+        "/data/images/ceramic-7-img.png"
       ]
     },
     {
@@ -90,7 +86,7 @@
       "size": "20 × 20 × 3 см",
       "description": "Орнамент в стиле классицизма отражает архитектурные тенденции эпохи.",
       "images": [
-        "https://via.placeholder.com/800x600?text=Изразец+8"
+        "/data/images/ceramic-8-img.png"
       ]
     },
     {
@@ -101,7 +97,7 @@
       "size": "18 × 18 × 2.5 см",
       "description": "Изразец с декоративным бордюром использовался для обрамления печных панелей.",
       "images": [
-        "https://via.placeholder.com/800x600?text=Изразец+9"
+        "/data/images/ceramic-1-img.png"
       ]
     }
   ],
@@ -114,8 +110,7 @@
       "size": "Высота 25 см, диаметр 20 см",
       "description": "Бытовая керамика для хранения продуктов. Изготовлен из местной глины, обожжен в печи. Характерная форма и техника изготовления.",
       "images": [
-        "https://via.placeholder.com/800x600?text=Горшок+1",
-        "https://via.placeholder.com/800x600?text=Горшок+1+вид+2"
+        "/data/images/ceramic-1-img.png"
       ]
     },
     {
@@ -126,7 +121,7 @@
       "size": "Высота 30 см, диаметр 18 см",
       "description": "Кувшин для воды с характерной формой и ручкой.",
       "images": [
-        "https://via.placeholder.com/800x600?text=Кувшин+1"
+        "/data/images/ceramic-2-img.png"
       ]
     },
     {
@@ -137,8 +132,7 @@
       "size": "Высота 20 см, диаметр 15 см",
       "description": "Традиционная крынка для молока и других жидкостей.",
       "images": [
-        "https://via.placeholder.com/800x600?text=Крынка+1",
-        "https://via.placeholder.com/800x600?text=Крынка+1+вид+2"
+        "/data/images/ceramic-3-img.png"
       ]
     },
     {
@@ -149,7 +143,7 @@
       "size": "Высота 22 см, диаметр 19 см",
       "description": "Горшок с двумя ручками для удобного переноса.",
       "images": [
-        "https://via.placeholder.com/800x600?text=Горшок+2"
+        "/data/images/ceramic-4-img.png"
       ]
     },
     {
@@ -160,7 +154,7 @@
       "size": "Диаметр 35 см, высота 12 см",
       "description": "Большая миска для замешивания теста.",
       "images": [
-        "https://via.placeholder.com/800x600?text=Миска+тесто"
+        "/data/images/ceramic-5-img.png"
       ]
     },
     {
@@ -171,7 +165,7 @@
       "size": "Высота 28 см, диаметр 22 см",
       "description": "Корчага для хранения зерна и других сыпучих продуктов.",
       "images": [
-        "https://via.placeholder.com/800x600?text=Корчага+1"
+        "/data/images/ceramic-6-img.png"
       ]
     },
     {
@@ -182,7 +176,7 @@
       "size": "Высота 15 см, диаметр 12 см",
       "description": "Небольшой горшок для хранения масла.",
       "images": [
-        "https://via.placeholder.com/800x600?text=Масленка+1"
+        "/data/images/ceramic-7-img.png"
       ]
     },
     {
@@ -193,8 +187,7 @@
       "size": "Высота 25 см, диаметр 16 см",
       "description": "Кувшин с носиком для удобного наливания.",
       "images": [
-        "https://via.placeholder.com/800x600?text=Кувшин+2",
-        "https://via.placeholder.com/800x600?text=Кувшин+2+вид+2"
+        "/data/images/ceramic-8-img.png"
       ]
     },
     {
@@ -205,7 +198,7 @@
       "size": "Высота 18 см, диаметр 20 см",
       "description": "Горшок специальной формы для приготовления каши.",
       "images": [
-        "https://via.placeholder.com/800x600?text=Горшок+каша"
+        "/data/images/ceramic-1-img.png"
       ]
     }
   ],
@@ -218,7 +211,7 @@
       "size": "Диаметр 15 см, высота 5 см",
       "description": "Столовая посуда с ручной росписью. Использовалась в быту зажиточных семей. Сохранила следы оригинальной росписи.",
       "images": [
-        "https://via.placeholder.com/800x600?text=Миска+1"
+        "/data/images/ceramic-1-img.png"
       ]
     },
     {
@@ -229,8 +222,7 @@
       "size": "Диаметр 20 см",
       "description": "Тарелка с декоративным орнаментом по краю.",
       "images": [
-        "https://via.placeholder.com/800x600?text=Тарелка+1",
-        "https://via.placeholder.com/800x600?text=Тарелка+1+вид+2"
+        "/data/images/ceramic-2-img.png"
       ]
     },
     {
@@ -241,7 +233,7 @@
       "size": "Диаметр 30 см",
       "description": "Большое блюдо для подачи блюд.",
       "images": [
-        "https://via.placeholder.com/800x600?text=Блюдо+1"
+        "/data/images/ceramic-3-img.png"
       ]
     },
     {
@@ -252,7 +244,7 @@
       "size": "Высота 8 см, диаметр 10 см",
       "description": "Чашка с декоративной росписью и удобной ручкой.",
       "images": [
-        "https://via.placeholder.com/800x600?text=Чашка+1"
+        "/data/images/ceramic-4-img.png"
       ]
     },
     {
@@ -263,7 +255,7 @@
       "size": "Высота 6 см, диаметр 5 см",
       "description": "Небольшая керамическая стопка.",
       "images": [
-        "https://via.placeholder.com/800x600?text=Стопка+1"
+        "/data/images/ceramic-5-img.png"
       ]
     },
     {
@@ -274,7 +266,7 @@
       "size": "Диаметр 18 см, высота 8 см",
       "description": "Глубокая миска для супа или каши.",
       "images": [
-        "https://via.placeholder.com/800x600?text=Миска+глубокая"
+        "/data/images/ceramic-6-img.png"
       ]
     },
     {
@@ -285,7 +277,7 @@
       "size": "Диаметр 12 см",
       "description": "Блюдце для чашки.",
       "images": [
-        "https://via.placeholder.com/800x600?text=Блюдце+1"
+        "/data/images/ceramic-7-img.png"
       ]
     },
     {
@@ -296,8 +288,7 @@
       "size": "Высота 12 см, диаметр 8 см",
       "description": "Кружка с декоративной росписью.",
       "images": [
-        "https://via.placeholder.com/800x600?text=Кружка+1",
-        "https://via.placeholder.com/800x600?text=Кружка+1+вид+2"
+        "/data/images/ceramic-8-img.png"
       ]
     },
     {
@@ -308,9 +299,8 @@
       "size": "Диаметр 16 см",
       "description": "Мелкая тарелка для закусок.",
       "images": [
-        "https://via.placeholder.com/800x600?text=Тарелка+мелкая"
+        "/data/images/ceramic-1-img.png"
       ]
     }
   ]
 }
-
