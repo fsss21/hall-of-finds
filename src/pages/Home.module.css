@@ -39,6 +39,34 @@
   }
 }
 
+.gameWrapper {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  background: #50442e;
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
+}
+
+.backButton {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  z-index: 101;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  background: rgba(34, 17, 2, 0.85);
+  color: #e8dcc8;
+  border: 1px solid #221102;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.backButton:hover {
+  background: rgba(34, 17, 2, 0.95);
+}
+
 @media (max-width: 968px) {
   .home {
     flex-direction: column;

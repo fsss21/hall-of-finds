@@ -1,0 +1,122 @@
+.finishedScreen {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 40px 20px;
+  width: 100%;
+  max-width: 100vw;
+  overflow-x: hidden;
+  box-sizing: border-box;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.finishedTitle {
+  position: absolute;
+  top: 4%;
+  font-size: 48px;
+  color: #221203;
+  margin-bottom: 40px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.finishedScore {
+  
+  padding: 40px;
+  border-radius: 20px;
+  margin-bottom: 40px;
+  max-width: 1000px;
+  width: 100%;
+}
+
+.scoreText {
+  font-size: 44px;
+  color: #453A26;
+  margin-bottom: 20px;
+}
+
+.scoreNumber {
+  font-size: 48px;
+  font-weight: bold;
+  color: #453A26;
+}
+
+.scoreMessage {
+  font-family: 'Raleway', sans-serif;
+  font-size: 20px;
+  color: #453A26;
+  margin-top: 20px;
+}
+
+.finishedButtons {
+  position: absolute;
+  bottom: 2%;
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1400px;
+}
+
+.finishedButton {
+  padding: 20px 40px;
+  font-size: 20px;
+  font-weight: 600;
+  width: 600px;
+  height: 150px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background: #3d2e19;
+  color: #CBB293;
+  border: 2px solid #CBB495;
+}
+
+.finishedButton:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+.finishedButtonSecondary {
+  background: #3d2e19;
+  color: #CBB293;
+  border: 2px solid #CBB495;
+}
+
+.finishedButtonSecondary:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+@media (max-width: 768px) {
+  .finishedTitle {
+    font-size: 36px;
+  }
+
+  .finishedScore {
+    padding: 30px;
+  }
+
+  .scoreText {
+    font-size: 20px;
+  }
+
+  .scoreNumber {
+    font-size: 36px;
+  }
+
+  .finishedButtons {
+    flex-direction: column;
+    width: 100%;
+    max-width: 400px;
+  }
+
+  .finishedButton {
+    width: 100%;
+  }
+}

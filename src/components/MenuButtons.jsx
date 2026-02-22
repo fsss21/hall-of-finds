@@ -1,6 +1,6 @@
 import styles from './MenuButtons.module.css'
 
-function MenuButtons({ onCategorySelect, selectedCategory }) {
+function MenuButtons({ onCategorySelect, selectedCategory, onGuessMaterialClick, onDetermineGameClick }) {
   return (
     <div className={styles.menuButtons}>
       <div className={styles.menuBlock}>
@@ -27,10 +27,18 @@ function MenuButtons({ onCategorySelect, selectedCategory }) {
       </div>
 
       <div className={styles.menuBlock}>
-        <button className={`${styles.menuButton} ${styles.menuButtonQuiz}`}>
+        <button
+          type="button"
+          className={`${styles.menuButton} ${styles.menuButtonQuiz}`}
+          onClick={onGuessMaterialClick}
+        >
           Квиз &quot;Угадай материал&quot;
         </button>
-        <button className={`${styles.menuButton} ${styles.menuButtonQuiz}`}>
+        <button
+          type="button"
+          className={`${styles.menuButton} ${styles.menuButtonQuiz}`}
+          onClick={onDetermineGameClick}
+        >
           Угадай что делает предмет
         </button>
       </div>

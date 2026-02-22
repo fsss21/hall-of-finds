@@ -1,0 +1,31 @@
+@font-face {
+  font-family: 'Anticva';
+  src: url('https://cdn.jsdelivr.net/gh/KonstatinKrastev/Anticva-Font@main/font/Anticva-Regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Anticva', serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+button,
+input[type='button'],
+input[type='submit'],
+input[type='reset'] {
+  font-family: 'Anticva', serif;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}

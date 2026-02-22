@@ -1,0 +1,74 @@
+.startScreen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  text-align: center;
+  padding: 40px 20px;
+  width: 100%;
+  max-width: 100vw;
+  overflow-x: hidden;
+  box-sizing: border-box;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.startTitle {
+  font-size: 64px;
+  font-weight: normal;
+  color: #221203;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  text-transform: uppercase;
+}
+
+.startSubtitle {
+  font-size: 44px;
+  color: #221203;
+  margin-bottom: 60px;
+  opacity: 0.9;
+  text-transform: uppercase;
+}
+
+.startButton {
+  width: 33.33%;
+  min-width: 300px;
+  max-width: calc(100vw - 40px);
+  padding: 30px 60px;
+  font-size: 28px;
+  font-weight: bold;
+  background: #503E24;
+  color: #CBB293;
+  text-transform: uppercase;
+  border: solid #9b8872 3px;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+  box-sizing: border-box;
+}
+
+.startButton:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 768px) {
+  .startTitle {
+    font-size: 42px;
+  }
+
+  .startSubtitle {
+    font-size: 20px;
+    margin-bottom: 40px;
+  }
+
+  .startButton {
+    width: 80%;
+    min-width: 250px;
+    font-size: 22px;
+    padding: 25px 40px;
+  }
+}
