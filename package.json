@@ -5,12 +5,12 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "build:server": "pkg server.cjs --out-path dist --targets node18-win-x64,node18-macos-x64 --assets dist",
-    "build:server:win": "pkg server.cjs --out-path dist --targets node18-win-x64 --assets dist",
-    "build:server:mac": "pkg server.cjs --out-path dist --targets node18-macos-x64 --assets dist",
+    "build:server": "pkg server.cjs --out-path build --targets node18-win-x64,node18-macos-x64 --assets build",
+    "build:server:win": "pkg server.cjs --out-path build --targets node18-win-x64 --assets build",
+    "build:server:mac": "pkg server.cjs --out-path build --targets node18-macos-x64 --assets build",
     "build:all": "npm run build && npm run build:server",
-    "build:all:win": "npm run build && npm run build:server:win",
-    "build:all:mac": "npm run build && npm run build:server:mac",
+    "build:win": "npm run build && npm run build:server:win",
+    "build:mac": "npm run build && npm run build:server:mac",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"
   },
@@ -36,12 +36,12 @@
       "server.cjs"
     ],
     "assets": [
-      "dist/**/*"
+      "build/**/*"
     ],
     "targets": [
       "node18-win-x64",
       "node18-macos-x64"
     ],
-    "outputPath": "dist"
+    "outputPath": "build"
   }
 }

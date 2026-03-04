@@ -8,36 +8,36 @@ const { platform } = require('os');
 const app = express();
 const PORT = 3001;
 
-// Определяем путь к папке dist
+// Определяем путь к папке build
 // При запуске через pkg, пути к файлам отличаются
 const fs = require('fs');
-let distPath;
+let buildPath;
 
 if (process.pkg) {
   // При запуске через pkg, assets находятся в snapshot
   // Пробуем разные возможные пути
   const possiblePaths = [
-    path.join(__dirname, 'dist'), // /snapshot/architects-office/dist
-    path.join(__dirname, '../dist'), // альтернативный путь
+    path.join(__dirname, 'build'), // /snapshot/architects-office/build
+    path.join(__dirname, '../build'), // альтернативный путь
     path.dirname(process.execPath), // рядом с исполняемым файлом
-    path.join(path.dirname(process.execPath), 'dist'), // dist рядом с exe
+    path.join(path.dirname(process.execPath), 'build'), // build рядом с exe
   ];
 
   // Ищем существующий путь
   for (const testPath of possiblePaths) {
     if (existsSync(testPath) && existsSync(path.join(testPath, 'index.html'))) {
-      distPath = testPath;
-      console.log('PKG mode - Found dist at:', distPath);
+      buildPath = testPath;
+      console.log('PKG mode - Found build at:', buildPath);
       break;
     }
   }
 
-  // Если не нашли, используем __dirname/dist и выводим отладочную информацию
-  if (!distPath) {
-    distPath = path.join(__dirname, 'dist');
+  // Если не нашли, используем __dirname/build и выводим отладочную информацию
+  if (!buildPath) {
+    buildPath = path.join(__dirname, 'build');
     console.log('PKG mode - __dirname:', __dirname);
     console.log('PKG mode - process.execPath:', process.execPath);
-    console.log('PKG mode - distPath:', distPath);
+    console.log('PKG mode - buildPath:', buildPath);
 
     // Список файлов в __dirname для отладки
     try {
@@ -47,29 +47,29 @@ if (process.pkg) {
       console.log('PKG mode - cannot read __dirname:', e.message);
     }
 
-    // Проверяем dist папку
+    // Проверяем build папку
     try {
-      if (existsSync(distPath)) {
-        const distFiles = fs.readdirSync(distPath);
-        console.log('PKG mode - files in dist:', distFiles);
+      if (existsSync(buildPath)) {
+        const buildFiles = fs.readdirSync(buildPath);
+        console.log('PKG mode - files in build:', buildFiles);
       } else {
-        console.log('PKG mode - dist folder does not exist at:', distPath);
+        console.log('PKG mode - build folder does not exist at:', buildPath);
       }
     } catch (e) {
-      console.log('PKG mode - cannot read dist:', e.message);
+      console.log('PKG mode - cannot read build:', e.message);
     }
   }
 } else {
-  // При обычном запуске, dist находится рядом с server.cjs
-  distPath = path.join(__dirname, 'dist');
+  // При обычном запуске, build находится рядом с server.cjs
+  buildPath = path.join(__dirname, 'build');
 }
 
-// Обслуживание статических файлов из папки dist
-app.use(express.static(distPath));
+// Обслуживание статических файлов из папки build
+app.use(express.static(buildPath));
 
 // Для всех остальных маршрутов возвращаем index.html (SPA routing)
 app.get('*', (req, res) => {
-  res.sendFile(path.join(distPath, 'index.html'));
+  res.sendFile(path.join(buildPath, 'index.html'));
 });
 
 // Функция для запуска браузера в киоск-режиме
@@ -202,7 +202,7 @@ function launchBrowser() {
 
 app.listen(PORT, () => {
   console.log(`Server is running on http://localhost:${PORT}`);
-  console.log(`Serving files from: ${distPath}`);
+  console.log(`Serving files from: ${buildPath}`);
 
   // Запускаем браузер автоматически (Windows и macOS)
   if (platform() === 'win32' || platform() === 'darwin') {
