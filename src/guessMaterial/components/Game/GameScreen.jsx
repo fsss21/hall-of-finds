@@ -2,7 +2,7 @@ import React from 'react'
 import styles from './GameScreen.module.css'
 import AnswerButtons from './AnswerButtons'
 import ResultOverlay from './ResultOverlay'
-import { getMaterialImageUrl } from '../../constants/gameConstants'
+import { getMaterialImageUrl, getGameDataImageUrl } from '../../constants/gameConstants'
 import gameScreenBg from '../../assets/game_screen_img.png'
 import placeHolderImg from '../../assets/place_holder_img.png'
 
@@ -13,6 +13,10 @@ function GameScreen({
   showResult,
   onAnswer
 }) {
+  const imageUrl = currentItem
+    ? (getMaterialImageUrl(currentItem.image) || getGameDataImageUrl(currentItem.image) || placeHolderImg)
+    : placeHolderImg
+
   return (
     <div
       className={styles.gameScreen}
@@ -20,7 +24,7 @@ function GameScreen({
     >
       <div className={styles.imageContainer}>
         <img
-          src={currentItem ? (getMaterialImageUrl(currentItem.image) || placeHolderImg) : placeHolderImg}
+          src={imageUrl}
           alt={currentItem?.name || 'Изображение находки'}
           className={styles.itemImage}
           onError={(e) => {
