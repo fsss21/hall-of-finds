@@ -10,19 +10,29 @@ export function getMaterialImageUrl(image) {
   return DATA_BASE_URL + '/' + image
 }
 
+/** URL картинки из public/gameData/guessMaterial/images (по имени файла). Если там есть фото — используем его, иначе placeholder при ошибке загрузки. */
+export function getGameDataImageUrl(image) {
+  if (!image || typeof image !== 'string') return null
+  const basename = image.replace(/^.*\//, '')
+  if (!basename) return null
+  return `${DATA_BASE_URL}/images/${basename}`
+}
+
+/** 4 основные категории + Стекло (вопрос 23). Кость/рог объединены с деревом в одну кнопку. */
 export const ANSWER_OPTIONS = [
   'Керамика/глина',
-  'Металл (железо/медь)',
-  'Дерево',
-  'Камень/кирпич'
+  'Кость/рог/дерево',
+  'Металл',
+  'Камень/кирпич',
+  'Стекло'
 ]
 
 export const MAX_QUESTIONS = 10
 
 export const MATERIAL_OPTIONS = [
   'Керамика/глина',
-  'Металл (железо/медь)',
-  'Дерево',
+  'Кость/рог/дерево',
+  'Металл',
   'Камень/кирпич',
   'Стекло'
 ]

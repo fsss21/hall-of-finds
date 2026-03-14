@@ -2,13 +2,19 @@
   height: 50vh;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
+  grid-template-rows: 1fr 1fr auto;
   gap: 20px;
   padding: 30px;
   width: 100%;
   max-width: 100%;
   box-sizing: border-box;
   overflow-x: hidden;
+}
+
+.answerButton:nth-child(5) {
+  grid-column: 1 / -1;
+  justify-self: center;
+  max-width: calc(50% - 10px);
 }
 
 .answerButton {
@@ -99,9 +105,14 @@
 @media (max-width: 768px) {
   .answersContainer {
     grid-template-columns: 1fr;
-    grid-template-rows: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
     gap: 15px;
     padding: 20px;
+  }
+
+  .answerButton:nth-child(5) {
+    grid-column: 1;
+    max-width: 100%;
   }
 
   .answerButton {

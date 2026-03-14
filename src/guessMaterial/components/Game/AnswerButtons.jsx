@@ -8,9 +8,10 @@ import stoneTexture from '../../assets/stone_texture_img.png'
 
 const TEXTURE_IMAGE_MAP = {
   'Керамика/глина': clayTexture,
-  'Металл (железо/медь)': metalTexture,
-  'Дерево': woodTexture,
+  'Кость/рог/дерево': woodTexture,
+  'Металл': metalTexture,
   'Камень/кирпич': stoneTexture,
+  'Стекло': undefined,
 }
 
 function AnswerButtons({ currentItem, selectedAnswer, isCorrect, showResult, onAnswer }) {
