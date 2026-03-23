@@ -96,3 +96,46 @@
     padding: 1rem 1.5rem;
   }
 }
+
+@media (min-width: 2560px) {
+  .gameScreen {
+    background-image: url('../../assets/game_screen_img-4k.png');
+  }
+
+  .container {
+    max-width: 2200px;
+    min-height: 1160px;
+    gap: 5rem;
+  }
+
+  .imageContainer {
+    max-width: 680px;
+    border-radius: 22px;
+    padding: 2.5rem;
+  }
+
+  .optionButton {
+    max-width: 1100px;
+    padding: 1.6rem 2.4rem;
+    font-size: 1.5rem;
+  }
+}
+
+@media (min-width: 3840px) {
+  .container {
+    max-width: 2900px;
+    min-height: 1440px;
+  }
+
+  .imageContainer {
+    max-width: 860px;
+    border-radius: 30px;
+    padding: 3rem;
+  }
+
+  .optionButton {
+    max-width: 1380px;
+    padding: 2rem 3rem;
+    font-size: 1.9rem;
+  }
+}

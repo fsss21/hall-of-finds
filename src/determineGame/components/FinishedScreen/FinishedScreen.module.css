@@ -101,3 +101,67 @@
     font-size: 1rem;
   }
 }
+
+@media (min-width: 2560px) {
+  .finishedScreen {
+    background-image: url('../../assets/finished_screen_img-4k.png');
+  }
+
+  .container {
+    max-width: 1400px;
+    min-height: 1120px;
+    gap: 3rem;
+  }
+
+  .title {
+    font-size: 4rem;
+  }
+
+  .stats {
+    font-size: 2.1rem;
+  }
+
+  .supportMessage {
+    max-width: 620px;
+    font-size: 1.8rem;
+  }
+
+  .actions {
+    max-width: 1160px;
+    gap: 1.6rem;
+  }
+
+  .actionButton {
+    height: 150px;
+    font-size: 1.5rem;
+  }
+}
+
+@media (min-width: 3840px) {
+  .container {
+    max-width: 1800px;
+    min-height: 1400px;
+  }
+
+  .title {
+    font-size: 5rem;
+  }
+
+  .stats {
+    font-size: 2.8rem;
+  }
+
+  .supportMessage {
+    max-width: 760px;
+    font-size: 2.2rem;
+  }
+
+  .actions {
+    max-width: 1500px;
+  }
+
+  .actionButton {
+    height: 190px;
+    font-size: 1.9rem;
+  }
+}

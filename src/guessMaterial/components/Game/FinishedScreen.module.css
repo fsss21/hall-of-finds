@@ -13,6 +13,7 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  background-image: url('../../assets/finished_img.png');
 }
 
 .finishedTitle {
@@ -118,5 +119,62 @@
 
   .finishedButton {
     width: 100%;
+  }
+}
+
+@media (min-width: 2560px) {
+  .finishedScreen {
+    background-image: url('../../assets/finished_img-4k.png');
+  }
+
+  .finishedTitle {
+    font-size: 62px;
+  }
+
+  .scoreText {
+    font-size: 56px;
+  }
+
+  .scoreNumber {
+    font-size: 64px;
+  }
+
+  .scoreMessage {
+    font-size: 30px;
+  }
+
+  .finishedButtons {
+    max-width: 1800px;
+    gap: 28px;
+  }
+
+  .finishedButton {
+    width: 820px;
+    height: 180px;
+    font-size: 28px;
+  }
+}
+
+@media (min-width: 3840px) {
+  .finishedTitle {
+    font-size: 76px;
+  }
+
+  .scoreText {
+    font-size: 72px;
+  }
+
+  .scoreNumber {
+    font-size: 82px;
+  }
+
+  .scoreMessage {
+    font-size: 36px;
+  }
+
+  .finishedButton {
+    width: 980px;
+    height: 220px;
+    font-size: 34px;
   }
 }

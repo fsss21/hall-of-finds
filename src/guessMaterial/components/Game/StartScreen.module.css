@@ -13,6 +13,7 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  background-image: url('../../assets/main_img.png');
 }
 
 .startTitle {
@@ -70,5 +71,46 @@
     min-width: 250px;
     font-size: 22px;
     padding: 25px 40px;
+  }
+}
+
+@media (min-width: 2560px) {
+  .startScreen {
+    background-image: url('../../assets/main_img-4k.png');
+    padding: 56px 32px;
+  }
+
+  .startTitle {
+    font-size: 84px;
+  }
+
+  .startSubtitle {
+    font-size: 56px;
+    margin-bottom: 80px;
+  }
+
+  .startButton {
+    min-width: 420px;
+    max-width: 760px;
+    padding: 36px 72px;
+    font-size: 34px;
+  }
+}
+
+@media (min-width: 3840px) {
+  .startTitle {
+    font-size: 104px;
+  }
+
+  .startSubtitle {
+    font-size: 68px;
+    margin-bottom: 96px;
+  }
+
+  .startButton {
+    min-width: 520px;
+    max-width: 900px;
+    padding: 44px 88px;
+    font-size: 42px;
   }
 }

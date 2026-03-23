@@ -1,7 +1,6 @@
 import React from 'react'
 import styles from './FinishedScreen.module.css'
 import { MAX_QUESTIONS } from '../../constants/gameConstants'
-import finishedImg from '../../assets/finished_img.png'
 
 function FinishedScreen({ score, onRestart, onShowCatalog }) {
   const getScoreMessage = () => {
@@ -13,10 +12,7 @@ function FinishedScreen({ score, onRestart, onShowCatalog }) {
   }
 
   return (
-    <div
-      className={styles.finishedScreen}
-      style={{ backgroundImage: `url(${finishedImg})` }}
-    >
+    <div className={styles.finishedScreen}>
       <h2 className={styles.finishedTitle}> Игра завершена!</h2>
       <div className={styles.finishedScore}>
         <p className={styles.scoreText}>

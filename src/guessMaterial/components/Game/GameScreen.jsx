@@ -3,7 +3,6 @@ import styles from './GameScreen.module.css'
 import AnswerButtons from './AnswerButtons'
 import ResultOverlay from './ResultOverlay'
 import { getMaterialImageUrl, getGameDataImageUrl } from '../../constants/gameConstants'
-import gameScreenBg from '../../assets/game_screen_img.png'
 import placeHolderImg from '../../assets/place_holder_img.png'
 
 function GameScreen({
@@ -18,10 +17,7 @@ function GameScreen({
     : placeHolderImg
 
   return (
-    <div
-      className={styles.gameScreen}
-      style={{ backgroundImage: `url(${gameScreenBg})` }}
-    >
+    <div className={styles.gameScreen}>
       <div className={styles.imageContainer}>
         <img
           src={imageUrl}

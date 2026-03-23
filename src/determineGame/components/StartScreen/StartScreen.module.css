@@ -66,3 +66,44 @@
     font-size: 1.2rem;
   }
 }
+
+@media (min-width: 2560px) {
+  .startScreen {
+    background-image: url('../../assets/start_sreen_img-4k.png');
+  }
+
+  .content {
+    max-width: 1300px;
+  }
+
+  .title {
+    font-size: 64px;
+  }
+
+  .subtitle {
+    font-size: 58px;
+    margin-bottom: 4rem;
+  }
+
+  .startButton {
+    max-width: 700px;
+    padding: 36px 72px;
+    font-size: 34px;
+  }
+}
+
+@media (min-width: 3840px) {
+  .title {
+    font-size: 84px;
+  }
+
+  .subtitle {
+    font-size: 72px;
+  }
+
+  .startButton {
+    max-width: 860px;
+    padding: 44px 88px;
+    font-size: 40px;
+  }
+}

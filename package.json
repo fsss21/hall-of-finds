@@ -5,9 +5,9 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "build:server": "pkg server.cjs --out-path build --targets node18-win-x64,node18-macos-x64 --assets build",
-    "build:server:win": "pkg server.cjs --out-path build --targets node18-win-x64 --assets build",
-    "build:server:mac": "pkg server.cjs --out-path build --targets node18-macos-x64 --assets build",
+    "build:server": "pkg src/server/index.js --out-path build --targets node18-win-x64,node18-macos-x64 --assets build",
+    "build:server:win": "pkg src/server/index.js --out-path build --targets node18-win-x64 --assets build",
+    "build:server:mac": "pkg src/server/index.js --out-path build --targets node18-macos-x64 --assets build",
     "build:all": "npm run build && npm run build:server",
     "build:win": "npm run build && npm run build:server:win",
     "build:mac": "npm run build && npm run build:server:mac",
@@ -19,6 +19,9 @@
     "@emotion/styled": "^11.14.1",
     "@mui/icons-material": "^7.3.7",
     "@mui/material": "^7.3.7",
+    "cors": "^2.8.6",
+    "express": "^5.2.1",
+    "fs-extra": "^11.3.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
@@ -33,7 +36,7 @@
   },
   "pkg": {
     "scripts": [
-      "server.cjs"
+      "src/server/index.js"
     ],
     "assets": [
       "build/**/*"

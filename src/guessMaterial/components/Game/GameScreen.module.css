@@ -10,6 +10,7 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  background-image: url('../../assets/game_screen_img.png');
 }
 
 .imageContainer {
@@ -39,4 +40,23 @@
   font-size: 18px;
   text-align: center;
   padding: 40px;
+}
+
+@media (min-width: 2560px) {
+  .gameScreen {
+    background-image: url('../../assets/game_screen_img-4k.png');
+  }
+
+  .itemImage {
+    right: 10%;
+    max-width: 760px;
+    max-height: 560px;
+  }
+}
+
+@media (min-width: 3840px) {
+  .itemImage {
+    max-width: 980px;
+    max-height: 700px;
+  }
 }
