@@ -24,6 +24,7 @@
 }
 
 .resultBlock {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -38,6 +39,40 @@
   width: 100%;
   max-width: 800px;
   min-height: 500px;
+}
+
+.closeButton {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  background: rgba(34, 18, 3, 0.15);
+  color: inherit;
+  font-size: 28px;
+  line-height: 1;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.closeButton:hover {
+  background: rgba(34, 18, 3, 0.28);
+  transform: scale(1.05);
+}
+
+.resultBlockIncorrect .closeButton {
+  background: rgba(0, 0, 0, 0.2);
+  color: #f0e0d0;
+}
+
+.resultBlockIncorrect .closeButton:hover {
+  background: rgba(0, 0, 0, 0.35);
 }
 
 .resultIcon {
@@ -81,6 +116,14 @@
 }
 
 @media (max-width: 768px) {
+  .closeButton {
+    top: 8px;
+    right: 8px;
+    width: 32px;
+    height: 32px;
+    font-size: 22px;
+  }
+
   .resultBlock {
     padding: 16px 20px;
   }

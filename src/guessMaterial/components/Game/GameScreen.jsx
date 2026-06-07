@@ -10,7 +10,8 @@ function GameScreen({
   selectedAnswer,
   isCorrect,
   showResult,
-  onAnswer
+  onAnswer,
+  onCloseResult
 }) {
   const imageUrl = currentItem
     ? (getMaterialImageUrl(currentItem.image) || getGameDataImageUrl(currentItem.image) || placeHolderImg)
@@ -42,6 +43,7 @@ function GameScreen({
         <ResultOverlay
           isCorrect={isCorrect}
           currentItem={currentItem}
+          onClose={onCloseResult}
         />
       )}
     </div>

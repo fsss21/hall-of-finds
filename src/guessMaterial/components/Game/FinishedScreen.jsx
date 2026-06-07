@@ -26,7 +26,7 @@ function FinishedScreen({ score, onRestart, onShowCatalog }) {
         </button>
         <button
           className={`${styles.finishedButton} ${styles.finishedButtonSecondary}`}
-          onClick={onShowCatalog}
+          onClick={() => onShowCatalog()}
         >
           Перейти к каталогу находок
         </button>

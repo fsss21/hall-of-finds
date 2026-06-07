@@ -1,7 +1,7 @@
 import React from 'react'
 import styles from './ResultOverlay.module.css'
 
-function ResultOverlay({ isCorrect, currentItem }) {
+function ResultOverlay({ isCorrect, currentItem, onClose }) {
   if (!currentItem) {
     return null
   }
@@ -11,6 +11,14 @@ function ResultOverlay({ isCorrect, currentItem }) {
   return (
     <div className={styles.resultOverlay}>
       <div className={`${styles.resultBlock} ${blockClass}`}>
+        <button
+          type="button"
+          className={styles.closeButton}
+          onClick={onClose}
+          aria-label="Закрыть"
+        >
+          ×
+        </button>
         <span className={styles.resultIcon} aria-hidden>
           {isCorrect ? '✅' : '❌'}
         </span>

@@ -1,10 +1,11 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef, useCallback } from 'react';
 import styles from './Game.module.css';
 import LoadingScreen from './LoadingScreen';
 import StartScreen from './StartScreen';
 import GameScreen from './GameScreen';
 import FinishedScreen from './FinishedScreen';
 import { MAX_QUESTIONS } from '../../constants/gameConstants';
+import { shuffleArray } from '../../../utils/shuffleArray';
 
 function Game({ onGoToCatalog }) {
     const [gameState, setGameState] = useState('start'); // start, playing, result, finished
@@ -18,6 +19,38 @@ function Game({ onGoToCatalog }) {
     const [score, setScore] = useState(0);
     const [usedItems, setUsedItems] = useState([]);
     const [shuffledItems, setShuffledItems] = useState([]);
+    const resultTimeoutRef = useRef(null);
+
+    const clearResultTimeout = useCallback(() => {
+        if (resultTimeoutRef.current) {
+            clearTimeout(resultTimeoutRef.current);
+            resultTimeoutRef.current = null;
+        }
+    }, []);
+
+    const advanceAfterResult = useCallback(() => {
+        setCurrentQuestion(prevQuestion => {
+            const nextQuestion = prevQuestion + 1;
+            if (nextQuestion > MAX_QUESTIONS) {
+                setGameState('finished');
+                return prevQuestion;
+            }
+            setGameState('playing');
+            setUsedItems(currentUsedItems => {
+                setShuffledItems(currentShuffled => {
+                    const itemsToUse = currentShuffled.length > 0 ? currentShuffled : items;
+                    startNewQuestion(nextQuestion, currentUsedItems, itemsToUse);
+                    return currentShuffled;
+                });
+                return currentUsedItems;
+            });
+            return nextQuestion;
+        });
+    }, [items]);
+
+    useEffect(() => {
+        return () => clearResultTimeout();
+    }, [clearResultTimeout]);
 
     useEffect(() => {
         // Загружаем данные из JSON файла
@@ -33,9 +66,6 @@ function Game({ onGoToCatalog }) {
                     throw new Error('Данные не найдены или пусты');
                 }
                 setItems(data);
-                // Перемешиваем предметы для случайного порядка
-                const shuffled = [...data].sort(() => Math.random() - 0.5);
-                setShuffledItems(shuffled);
                 setLoading(false);
             })
             .catch(error => {
@@ -56,7 +86,7 @@ function Game({ onGoToCatalog }) {
 
         if (availableItems.length === 0) {
             // Если все предметы использованы, перемешиваем заново
-            const reshuffled = [...itemsList].sort(() => Math.random() - 0.5);
+            const reshuffled = shuffleArray(itemsList);
             newShuffledItems = reshuffled;
             newItem = reshuffled[0];
             newUsedItems = [reshuffled[0].id];
@@ -73,14 +103,13 @@ function Game({ onGoToCatalog }) {
     };
 
     const handleStart = () => {
+        const shuffled = shuffleArray(items);
+        setShuffledItems(shuffled);
         setGameState('playing');
         setCurrentQuestion(1);
         setScore(0);
         setUsedItems([]);
-        // Используем setTimeout чтобы состояние успело обновиться
-        setTimeout(() => {
-            startNewQuestion(1, [], shuffledItems.length > 0 ? shuffledItems : items);
-        }, 0);
+        startNewQuestion(1, [], shuffled);
     };
 
     const handleAnswer = answer => {
@@ -95,28 +124,13 @@ function Game({ onGoToCatalog }) {
             setScore(prevScore => prevScore + 1);
         }
 
-        // Через 5 секунд переходим к следующему вопросу или финалу
-        setTimeout(() => {
-            setCurrentQuestion(prevQuestion => {
-                const nextQuestion = prevQuestion + 1;
-                if (nextQuestion > MAX_QUESTIONS) {
-                    setGameState('finished');
-                    return prevQuestion;
-                } else {
-                    setGameState('playing');
-                    // Получаем актуальные значения через callback
-                    setUsedItems(currentUsedItems => {
-                        setShuffledItems(currentShuffled => {
-                            const itemsToUse = currentShuffled.length > 0 ? currentShuffled : items;
-                            startNewQuestion(nextQuestion, currentUsedItems, itemsToUse);
-                            return currentShuffled;
-                        });
-                        return currentUsedItems;
-                    });
-                    return nextQuestion;
-                }
-            });
-        }, 5000);
+        clearResultTimeout();
+        resultTimeoutRef.current = setTimeout(advanceAfterResult, 5000);
+    };
+
+    const handleCloseResult = () => {
+        clearResultTimeout();
+        advanceAfterResult();
     };
 
     const handleRestart = () => {
@@ -124,6 +138,7 @@ function Game({ onGoToCatalog }) {
         setCurrentQuestion(0);
         setScore(0);
         setUsedItems([]);
+        setShuffledItems([]);
         setSelectedAnswer(null);
         setCurrentItem(null);
     };
@@ -172,6 +187,7 @@ function Game({ onGoToCatalog }) {
                 isCorrect={isCorrect}
                 showResult={gameState === 'result'}
                 onAnswer={handleAnswer}
+                onCloseResult={handleCloseResult}
             />
         );
     }

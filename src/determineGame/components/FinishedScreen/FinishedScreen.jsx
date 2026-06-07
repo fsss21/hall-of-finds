@@ -25,7 +25,7 @@ function FinishedScreen({ correctCount, totalCount, onPlayAgain, onViewCatalog }
           <button type="button" onClick={onPlayAgain} className={styles.actionButton}>
             Играть снова
           </button>
-          <button type="button" onClick={onViewCatalog} className={styles.actionButton}>
+          <button type="button" onClick={() => onViewCatalog()} className={styles.actionButton}>
             Перейти к каталогу находок
           </button>
         </div>

@@ -5,6 +5,7 @@ import GameScreen from './components/GameScreen/GameScreen'
 import ResultScreen from './components/ResultScreen/ResultScreen'
 import FinishedScreen from './components/FinishedScreen/FinishedScreen'
 import AdminPage from './components/AdminPage/AdminPage'
+import { shuffleArray } from '../utils/shuffleArray'
 const GAME_STATES = {
   START: 'start',
   PLAYING: 'playing',
@@ -17,7 +18,8 @@ function App({ onGoToCatalog }) {
   const [gameState, setGameState] = useState(GAME_STATES.START)
   const [currentItemIndex, setCurrentItemIndex] = useState(0)
   const [selectedAnswer, setSelectedAnswer] = useState(null)
-  const [gameItems, setGameItems] = useState([])
+  const [loadedItems, setLoadedItems] = useState([])
+  const [sessionItems, setSessionItems] = useState([])
   const [loading, setLoading] = useState(true)
   const [correctCount, setCorrectCount] = useState(0)
 
@@ -26,7 +28,8 @@ function App({ onGoToCatalog }) {
       const response = await fetch('/api/items')
       if (response.ok) {
         const data = await response.json()
-        setGameItems(Array.isArray(data) ? data : [])
+        const items = Array.isArray(data) ? data.filter(item => item.enabled !== false) : []
+        setLoadedItems(items)
         setLoading(false)
         return
       }
@@ -41,14 +44,14 @@ function App({ onGoToCatalog }) {
       if (response.ok) {
         const data = await response.json()
         const enabledItems = Array.isArray(data) ? data.filter(item => item.enabled !== false) : []
-        setGameItems(enabledItems)
+        setLoadedItems(enabledItems)
       } else {
         console.error('Не удалось загрузить предметы из gameData/determineGame/gameItems.json')
-        setGameItems([])
+        setLoadedItems([])
       }
     } catch (error) {
       console.error('Ошибка загрузки предметов из gameData/determineGame/gameItems.json:', error)
-      setGameItems([])
+      setLoadedItems([])
     } finally {
       setLoading(false)
     }
@@ -86,18 +89,23 @@ function App({ onGoToCatalog }) {
     }
   }, [loadGameItems])
 
-  const currentItem = gameItems[currentItemIndex]
+  const currentItem = sessionItems[currentItemIndex]
 
-  const handleStart = () => {
-    setGameState(GAME_STATES.PLAYING)
+  const startNewSession = () => {
+    setSessionItems(shuffleArray(loadedItems))
     setCurrentItemIndex(0)
     setSelectedAnswer(null)
     setCorrectCount(0)
   }
 
+  const handleStart = () => {
+    startNewSession()
+    setGameState(GAME_STATES.PLAYING)
+  }
+
   const handleAnswer = async (answerIndex) => {
     setSelectedAnswer(answerIndex)
-    const item = gameItems[currentItemIndex]
+    const item = sessionItems[currentItemIndex]
     const isCorrect = item && answerIndex === item.correctAnswer
     if (isCorrect) {
       setCorrectCount(c => c + 1)
@@ -126,7 +134,7 @@ function App({ onGoToCatalog }) {
 
   const handleNext = () => {
     const nextIndex = currentItemIndex + 1
-    if (nextIndex < gameItems.length) {
+    if (nextIndex < sessionItems.length) {
       setCurrentItemIndex(nextIndex)
       setSelectedAnswer(null)
       setGameState(GAME_STATES.PLAYING)
@@ -162,7 +170,7 @@ function App({ onGoToCatalog }) {
         return (
           <FinishedScreen
             correctCount={correctCount}
-            totalCount={gameItems.length}
+            totalCount={sessionItems.length}
             onPlayAgain={handlePlayAgain}
             onViewCatalog={onGoToCatalog}
           />

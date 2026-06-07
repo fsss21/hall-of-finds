@@ -43,12 +43,14 @@ function Gallery({ category, onExhibitSelect, onBack, onCategoryChange }) {
     const loadData = async () => {
       try {
         setLoading(true)
+        setExhibitsData(null)
         const response = await fetch(`/data/${category}.json`)
         if (!response.ok) throw new Error('Failed to load data')
         const data = await response.json()
         setExhibitsData(data)
       } catch (error) {
         console.error('Error loading exhibits data:', error)
+        setExhibitsData({})
       } finally {
         setLoading(false)
       }

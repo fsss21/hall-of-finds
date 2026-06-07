@@ -6,6 +6,8 @@ import GuessMaterialApp from '../guessMaterial/App'
 import DetermineGameApp from '../determineGame/App'
 import styles from './Home.module.css'
 
+const CATALOG_CATEGORIES = ['ceramics', 'metal', 'construction']
+
 function Home() {
   const [selectedCategory, setSelectedCategory] = useState('ceramics')
   const [selectedExhibit, setSelectedExhibit] = useState(null)
@@ -30,7 +32,9 @@ function Home() {
 
   /** Закрыть игру и вернуться на Home. category — опционально: 'ceramics' | 'metal' | 'construction' для выбора раздела каталога. */
   const goToCatalog = (category) => {
-    if (category) handleCategorySelect(category)
+    if (typeof category === 'string' && CATALOG_CATEGORIES.includes(category)) {
+      handleCategorySelect(category)
+    }
     setActiveGame(null)
   }
 
